@@ -12,6 +12,7 @@
     //     }
     // };
     
+    
     //37.563875 , 126.909335 마청단 위치
     //카카오 맵 api 시작
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
@@ -71,21 +72,22 @@
     //모든 준비 완료
     window.addEventListener('load', () => {
         const loading = document.querySelector('.loading');
+        window.scrollTo(0,0);
         
-        // setTimeout(() => {
-        // // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-        // // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
-        // map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-        // map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-        // //휠을 사용한 확대 축소 금지
-        // map.setZoomable(false); 
-        // map.panTo(changePosition); 
-        // loading.style.opacity = 0;
-        //     window.scrollTo(0,0);
-        //     setTimeout(() => {
-        //         loading.style.display = 'none';
-        //     }, 500);
-        // }, 4000);
+        setTimeout(() => {
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        //휠을 사용한 확대 축소 금지
+        map.setZoomable(false); 
+        map.panTo(changePosition); 
+        loading.style.opacity = 0;
+            setTimeout(() => {
+                loading.style.display = 'none';
+                document.documentElement.style.overflow = 'visible';
+            }, 500);
+        }, 4000);
     });
     //
 
@@ -101,19 +103,19 @@
     rootDom.style.fontFamily = fontArr[3];
     window.onload = () => nowFontName.innerHTML = "서체 : " +  rootDom.style.fontFamily;
     
-    window.document.onkeydown = (e) => {
-        let key = e.key;
-        if(key === "0"){
-            rootDom.style.fontFamily  = fontArr[fontNum];
-            nowFontName.innerHTML = "서체 : " +  rootDom.style.fontFamily;
-            change.selectedIndex = fontNum;
-            fontNum++;
-            if(fontNum >= fontArr.length){
-                fontNum = 0;
-            }
-            return false;
-        }
-    };
+    // window.document.onkeydown = (e) => {
+    //     let key = e.key;
+    //     if(key === "0"){
+    //         rootDom.style.fontFamily  = fontArr[fontNum];
+    //         nowFontName.innerHTML = "서체 : " +  rootDom.style.fontFamily;
+    //         change.selectedIndex = fontNum;
+    //         fontNum++;
+    //         if(fontNum >= fontArr.length){
+    //             fontNum = 0;
+    //         }
+    //         return false;
+    //     }
+    // };
 
     change.addEventListener('change',(e) => {
         fontNum = e.target.value;

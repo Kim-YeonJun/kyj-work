@@ -1,3 +1,7 @@
+html {
+    overflow: hidden;
+}
+
 .loading {
     position: fixed; 
     top: 0; 
@@ -6,28 +10,36 @@
     height: 100vh; 
     background-color: #000; 
     display: flex;
-    justify-content: center
+    justify-content: center;
+    transition: 0.5s;
 }
 .loading img{
     position: absolute;
-    width: 100%; 
-    height: 100vh; 
-    opacity: 0; 
-    top: -30%;
+    width: 80vw; 
+    height: 90vh; 
+    opacity: 0;
+    /* left: 10vw; */
+    top: -30vh;
     object-fit: contain; 
-    animation: moving 2s linear forwards;
+    animation: moving 1s linear forwards;
 }
 
-.loading img .progressbar{
+.loading .progressbar{
     position: absolute;
-    width: 90%; 
-    height: 100%;
+    width: 0vw; 
+    height: 1vh;
     background-color: #ddd;
-    /* overflow-x: hidden; */
+    border-radius: 50px;
+    left: 10vw;
+    bottom: 10vh; 
+    opacity: 1; 
+    animation: moving2 3s 1s infinite linear forwards;
+    overflow-x: hidden;
 }
 
 .loading .progressbar div{
     width: 100%; 
+    height: 1vh;
     background-color: #fff;
 }
 
@@ -35,7 +47,16 @@
     from {
     }
     to {
-        top: -10%; 
+        top: 0vh; 
         opacity: 1; 
+    }
+}
+
+@keyframes moving2 {
+    from{
+
+    }
+    to {
+        width: 80vw; 
     }
 }
