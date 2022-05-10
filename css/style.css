@@ -143,7 +143,6 @@ section {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    
     border-radius: 0 0 50px 0px;
 }
 
@@ -183,7 +182,6 @@ section {
 
 .about .row {
     display: flex;
-    /* align-items: center; */
     background: var(--bg);
     flex-wrap: wrap;
 }
@@ -192,7 +190,6 @@ section {
     flex: 1 1 45rem;
     padding: 2rem 0;
     margin-right: 2.5%;
-    /* border: 1px solid black; */
 }
 .about .row .image img{
     width: 100%;
@@ -203,13 +200,11 @@ section {
     flex: 1 1 45rem;
     padding: 2rem 0;
     margin-left: 2.5%;
-    /* border: 1px solid black; */
 }
 
 .about .row .content h3{
     font-size: 3rem;
     color: var(--black);
-    border-bottom: 1px solid black;
 }
 
 .about .row .content h3 span{
@@ -242,8 +237,6 @@ section {
     border-bottom: 1rem solid transparent;
     border-image: linear-gradient(to right,white 0%, black 50%, white 100%);
     border-image-slice: 1;
-    /* border-bottom: 0.5rem solid #555;
-     */
 }
 
 /* 인터뷰 박스컨테이너 형식 */
@@ -326,13 +319,10 @@ section {
     border-bottom: 1rem solid transparent;
     border-image: linear-gradient(to right,white 0%, black 50%, white 100%);
     border-image-slice: 1;
-    /* border-bottom: 0.5rem solid #555;
-     */
 }
 
 /* 프로젝트 박스컨테이너 형식 */
 .project .box_container {
-    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(40rem, 1fr));
@@ -344,7 +334,6 @@ section {
     width: 100%; 
     text-align: center;
     transition: 0.2s;
-    /* background-color: #eee; */
 }
 
 .project .box_container .box:hover  {
@@ -363,7 +352,6 @@ section {
 .project .box_container .box .card img{
     width: 100%; 
     height: 100%;
-    /* border: 1px solid black; */
     object-fit: cover;
 }
 
@@ -372,7 +360,6 @@ section {
     font-size: 3rem;
     color: #fff;
     text-shadow: 0 0 5px rgba(0,0,0,1);
-    /* border: 1px solid black; */
 }
 
 /* 프로젝트 섹션  끝*/
@@ -616,7 +603,6 @@ section {
         width: 100%;
         height: 47.5%;
         margin-bottom: 2.5%;
-        /* box-shadow: 0 2px 5px rgba(0,0,0, 0.3); */
     }
     
     .location .container .info {
@@ -629,7 +615,6 @@ section {
         display: grid;
         grid-template-columns: repeat(1, minmax(4rem, 1fr) 2fr);
         gap: 0.4rem;
-        /* border: 1px solid black; */
     }
 
     .goToHome #gotoHome-btn:hover{
@@ -729,7 +714,6 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* border: 1px solid brown; */
     }
     
     .footer .mapofont #selectfont{
