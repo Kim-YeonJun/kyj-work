@@ -204,4 +204,10 @@
     }
     //맨 위로 올라가는 버튼관려 이벤트 끝
 
+
+    //modal youtube 페이지
+    function test() {
+        alert("testtsst");
+    }
+    
 }

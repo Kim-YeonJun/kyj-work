@@ -85,7 +85,7 @@
     border-radius: 15px;
 } */
 
-
+/* 
 .interview .box_container .box p span{
     font-size: 1.5rem;
     font-weight: lighter;
@@ -127,7 +127,6 @@
 }
 
 
- /* media Queries */
 
 @media (max-width : 991px) {
     html {
@@ -207,7 +206,6 @@
         flex-direction: column;
         justify-content: center;
         height: 100rem;
-        /* border: 1px solid gray; */
     }
 
     .location .container #map {
@@ -256,4 +254,4 @@
     }
 
 }
-
+ */

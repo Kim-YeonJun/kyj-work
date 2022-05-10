@@ -29,18 +29,16 @@
 
 html {
     font-family: 'MapoDPP';
-    font-size: 62.5%;
+    /* 폰트사이즈 10px */
+    font-size: 10px;       
     overflow-x: hidden;
+    scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
 
-/*  */
+/*  스크롤바 제어  */
 html::-webkit-scrollbar {
     width: 0.0rem;
-}
-
-body {
-    /* background: var(--bg); */
 }
 
 section {
@@ -51,7 +49,7 @@ section {
 /* 헤더 섹션 시작*/
 .header {
     width: 100%;
-    max-height: 100px;
+    max-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,9 +65,9 @@ section {
     
 }
 
-.header .overlay_navbar{
-    display: none;
-}   
+.header .logo img{
+    width: 15rem;
+}
 
 .header .navbar{
 }   
@@ -89,9 +87,9 @@ section {
     transform: scale(1.2);
 }
 
-.header .logo img{
-    width: 15rem;
-}
+.header .overlay_navbar{
+    display: none;
+}   
 
 .header .icons {
     color: var(--mapowhite);
@@ -109,9 +107,6 @@ section {
     color: var(--mapowhite);
     transform: scale(1.2);
 }
-
-
-
 
 /* 헤더 섹션 끝*/
 
@@ -272,15 +267,12 @@ section {
 }
 
 .interview .box_container .box .card{
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 0 3rem; */
-    /* top : -60px; */
     height: 100%;
     width: 100%;
-    /* border: 0.1rem solid black; */
+    transition: 0.2s;
 }
 
 .interview .box_container .box .card:hover{
@@ -304,9 +296,8 @@ section {
     font-size: 2.5rem;
     bottom: 10px;
     text-shadow: 0 0 5px rgba(0,0,0,1);
-    /* background: radial-gradient(#000, #eee); */
-    /* box-shadow: 0px 0px 5px rgba(0,0,0, 0.5); */
 }
+
 .interview .box_container .box .card h3 span{
     color: #fff;
 }
@@ -326,9 +317,59 @@ section {
     width: 100%;
 }
 
-.project .content img {
+.project .heading {
     width: 100%;
+    font-size: 9rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1rem solid transparent;
+    border-image: linear-gradient(to right,white 0%, black 50%, white 100%);
+    border-image-slice: 1;
+    /* border-bottom: 0.5rem solid #555;
+     */
 }
+
+/* 프로젝트 박스컨테이너 형식 */
+.project .box_container {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(40rem, 1fr));
+    gap: 8rem 10rem;
+    margin-top: 10rem;
+}
+
+.project .box_container .box  {
+    width: 100%; 
+    text-align: center;
+    transition: 0.2s;
+    /* background-color: #eee; */
+}
+
+.project .box_container .box:hover  {
+    box-shadow: 0px 0px 1rem rgba(0, 174, 239, 0.7);
+}
+
+.project .box_container .box .card  {
+    height: 35rem;
+}
+
+.project .box_container .box .card img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    /* border: 1px solid black; */
+}
+
+.project .box_container .box .content {
+    padding: 1rem;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,1);
+    /* border: 1px solid black; */
+}
+
 /* 프로젝트 섹션  끝*/
 
 
@@ -346,7 +387,6 @@ section {
     border-bottom: 1rem solid transparent;
     border-image: linear-gradient(to right,white 0%, black 50%, white 100%);
     border-image-slice: 1;
-    /* border-bottom: 0.5rem solid #555; */
 }
 
 .location .heading span{
@@ -359,7 +399,6 @@ section {
     justify-content: center;
     height: 70rem;
     margin-top: 5rem;
-    /* border: 1px solid gray; */
 }
 
 .location .container #map {
@@ -374,16 +413,13 @@ section {
     height: 100%;
     margin-left: 2.5%;
     word-break: keep-all;
-    /* padding-top: 3rem; */
 
     display: grid;
     grid-template-columns: repeat(1, minmax(4rem, 1fr) 2fr);
-    /* grid-template-rows: repeat(auto-fill, minmax(6rem, 1fr)); */
     gap: 0.4rem;
 }
 
 .location .container .info p{
-    /* border: 1px solid gray; */
     border-bottom: 1px solid gray;
     font-size: 4rem;
     padding: 0.5rem;
@@ -408,7 +444,6 @@ section {
 }
 
 .location .container .info #tag5{
-    /* grid-column: 1 / span 2; */
 	grid-row: 3 / span 10;
 }
 
@@ -424,8 +459,6 @@ section {
 	grid-row: 11 / span 2;
 }
 
-
-
 .infoContent {
     font-size: 15px;
     padding: 5px;
@@ -440,7 +473,6 @@ section {
 /* 풋터 섹션  시작*/
 .footer {
     width: 100%;
-    /* height: 10vh; */
     padding: 1.5rem 2%;
     background-color: var(--mapogray);
     display: flex;
@@ -511,6 +543,7 @@ section {
 /* 풋터 섹션  끝*/
 
 
+
 /* 스크롤 맵위 버튼 시작 */
 
 .goToHome #gotoHome-btn{
@@ -554,5 +587,6 @@ section {
         opacity: 0;
     }
 }
+
 /* 스크롤 맵위 버튼 끝 */
 
