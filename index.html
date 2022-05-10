@@ -23,32 +23,39 @@
     <script async src="./js/initLoading.js"></script>
     <!-- 로딩 화면 끝-->
     
+    <!-- CSS 로딩 -->
+    <link rel="stylesheet" href="./css/style.css">
     <!-- kakao map api  -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c835a0cdeec02c6a2c5230355156b69"></script>
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/f986ab5e2d.js" crossorigin="anonymous"></script>
-    <!-- CSS 로딩 -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- custom js file link -->
     <script defer src="./js/main.js"></script>
 </head>
 <body>
         
-<!-- 헤더 section starts -->
-
-<div class="loading">
-    <img src="./images/휘장 색상활용_Black_Negative.png">
-    <div class="progressbar">
-        <div></div>
+    <!-- 처음 화면 페이지  start-->
+    <div class="loading">
+        <img src="./images/휘장 색상활용_Black_Negative.png">
+        <div class="progressbar">
+            <div></div>
+        </div>
     </div>
-</div>
+    <!-- 처음 화면 페이지  end-->
+    
+    <!-- top로 올려주는 버튼 start  -->
+    <div class="goToHome">
+        <div id="gotoHome-btn">↑<span>Top</span></div>
+    </div>
+    <div class="now_whatis_fontname"></div>
+    <!-- top로 올려주는 버튼 end  -->
 
+    <!-- 헤더 section starts -->
 <header class="header">
     <a href="#" class="logo">
         <img src="./images/휘장 색상활용_Black_Negative.png" alt="">
     </a>
 
-    <div class="overlay_navbar">1214132</div>
     <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#about">마청단?</a>
@@ -56,24 +63,19 @@
         <a href="#project">프로젝트</a>
         <a href="#location">오시는길</a>
     </nav>
-
+    
+    <!-- 브라우저 크기 768이하일때 작동 start -->
+    <div class="overlay_navbar">1214132</div>
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
     </div>
+    <!-- 브라우저 크기 768이하일때 작동 end -->
 </header>
 
 <!-- 헤더 section ends -->
 
-<!-- ect  -->
-<div class="goToHome">
-    <div id="gotoHome-btn">↑<span>Top</span></div>
-</div>
-<div class="now_whatis_fontname"></div>
-
-<!-- ect -->
-
-
 <!-- home section starts -->
+
 <section class="home" id="home">
     <div class="content">
         <div class="slidePanel">
@@ -115,6 +117,7 @@
 
 <!-- home section ends -->
 
+
 <!-- about section starts -->
 
 <section class="about" id="about">
@@ -137,6 +140,7 @@
 </section>
 
 <!-- about section ends -->
+
 
 <!-- interview section starts -->
 
@@ -192,6 +196,7 @@
 
 <!-- interview section ends -->
 
+
 <!-- project section starts -->
 
 <section class="project" id="project">
@@ -203,13 +208,17 @@
 
 <!-- project section ends -->
 
-<!-- project section starts -->
+
+<!-- location section starts -->
 
 <section class="location" id="location">
     <h1 class="heading">찾아오시는 <span>길</span></h1>
 
     <div class="container">
+        <!-- 카카오맵 api 구현 start -->
         <div id="map"></div>  
+        <!-- 카카오맵 api 구현 end -->
+
         <div class="info">
             <p id="tag1"class="tbName">주소</p>
             <p id="tag2"class="content">서울 마포구 성산로4길 53 前)마포구청 제3별관</p>
@@ -227,13 +236,15 @@
     </div>
 </section>
 
-<!-- project section ends -->
+<!-- location section ends -->
+
 
 <!--  footer section starts-->
 
     <section class="footer">
         <img src="./images/휘장 색상활용_Silver_Negative_s.png" alt="">
 
+        <!-- 사이트 개발 회사 정보 start -->
         <div class="container">
             <div class="links">
                 <a href="https://www.mapo.go.kr/html/corona/intro.htm">마포구청</a>
@@ -246,8 +257,10 @@
                 03965 서울특별시 마포구 성산로4길 53 (성산동) , TEL. 02-3153-8555
             </div>
             <div class="credit">created by <span>mr.Kim Developer</span> | all rights reserved</div>
-        </div>
+        </div>]
+        <!-- 사이트 개발 회사 정보 end -->
 
+        <!-- 사이트 폰트 선택 start -->
         <div class="mapofont">
             <div>사이트 서체</div>
             <select name="fontname" id="selectfont">
@@ -262,6 +275,7 @@
                 <option value="8">한아름</option>
             </select>
         </div>
+        <!-- 사이트 폰트 선택 end -->
     </section>
 
 <!--  footer section ends-->

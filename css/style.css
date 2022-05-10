@@ -19,41 +19,28 @@
 }
 
 * {
-    /* font-family: 'Roboto', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
-    /* text-transform: capitalize;          */
-    /* transition: 0.2s linear; */
-    /* background: var(--bg2); */
 }
 
 html {
     font-family: 'MapoDPP';
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
 
+/*  */
 html::-webkit-scrollbar {
     width: 0.0rem;
 }
 
-html::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: var(--bg2);
-    border-radius: 5rem;
-}
-
 body {
-    background: var(--bg);
+    /* background: var(--bg); */
 }
 
 section {
@@ -79,6 +66,7 @@ section {
     background: var(--bg2);
     
 }
+
 .header .overlay_navbar{
     display: none;
 }   

@@ -13,11 +13,11 @@
     // };
     
     
-    //37.563875 , 126.909335 마청단 위치
     //카카오 맵 api 시작
+    //37.563875 , 126.909335 마청단 위치
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-    let lLat = 37.563875;//33.450701;
-    let lLon = 126.909335;//126.570667;
+    let lLat = 37.563875;
+    let lLon = 126.909335;
 
     //지도생성 셋팅
     const options = { //지도를 생성할 때 필요한 기본 옵션
@@ -68,59 +68,53 @@
     //카카오 맵 종료
 
 
-
-    //모든 준비 완료
+    //모든 준비 완료시 실행
     window.addEventListener('load', () => {
         const loading = document.querySelector('.loading');
-        window.scrollTo(0,0);
+
+        setTimeout(() => {
+            // console.log('window.scrollY',window.scrollY);
+            window.scrollTo(0,0);
+        }, 500);
         
         setTimeout(() => {
-        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
         // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        //맵 타입[지도, 스카이뷰] 컨트롤러 추가
         map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        //줌버튼 컨트롤러 추가
         map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-        //휠을 사용한 확대 축소 금지
+        //마우스휠을 사용한 확대 축소 금지
         map.setZoomable(false); 
+        //해당 포지견으로 맵 중심을 이동시깁니다.
         map.panTo(changePosition); 
         loading.style.opacity = 0;
+        
             setTimeout(() => {
                 loading.style.display = 'none';
-                document.documentElement.style.overflow = 'visible';
+                document.documentElement.style.overflow = 'visible'; 
             }, 500);
         }, 4000);
     });
     //
-
+    
 
 
 
     //폰트 체인지 시작
     const fontArr = ['MapoAgape' , 'MapoBackpacking' , 'MapoDacapo' , 'MapoDPP' , 'MapoFlowerIsland' , 'MapoGoldenPier' , 'MapoHongdaeFreedom' , 'MapoMaponaru' , 'MapoPeacefull'];
+
     const rootDom = document.querySelector('.html');
     const nowFontName = document.querySelector('.now_whatis_fontname');
     const change = document.querySelector('#selectfont');
     let fontNum = 4;
+    
     rootDom.style.fontFamily = fontArr[3];
     window.onload = () => nowFontName.innerHTML = "서체 : " +  rootDom.style.fontFamily;
     
-    // window.document.onkeydown = (e) => {
-    //     let key = e.key;
-    //     if(key === "0"){
-    //         rootDom.style.fontFamily  = fontArr[fontNum];
-    //         nowFontName.innerHTML = "서체 : " +  rootDom.style.fontFamily;
-    //         change.selectedIndex = fontNum;
-    //         fontNum++;
-    //         if(fontNum >= fontArr.length){
-    //             fontNum = 0;
-    //         }
-    //         return false;
-    //     }
-    // };
-
     change.addEventListener('change',(e) => {
         fontNum = e.target.value;
         rootDom.style.fontFamily  = fontArr[fontNum];
-        // console.log(rootDom.style.fontFamily);
     });
     //폰트 체인지 종료
 
@@ -190,6 +184,17 @@
         }
     });
     
+    gotoHomeBtn.addEventListener("click", () => {
+        window.scrollTo(0,0);
+    });
+    
+    gotoHomeBtn.addEventListener("animationend", ()=> {
+        if(gotoHomeBtn.style.animationName === "fade-out")
+        {
+            gotoHomeBtn.style.display = "none";
+        }
+    });
+
     function scrollEvent(check, aniName) {
         if(scrollFlag) {
             gotoHomeBtn.style.display = "block";
@@ -197,17 +202,6 @@
         gotoHomeBtn.style.animation = `${aniName} 0.2s linear forwards`;
         scrollFlag = check;
     }
-
-    gotoHomeBtn.addEventListener("click", () => {
-        window.scrollTo(0,0);
-    });
-
-    gotoHomeBtn.addEventListener("animationend", ()=> {
-        if(gotoHomeBtn.style.animationName === "fade-out")
-        {
-            gotoHomeBtn.style.display = "none";
-        }
-    });
     //맨 위로 올라가는 버튼관려 이벤트 끝
 
 }

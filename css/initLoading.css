@@ -13,12 +13,12 @@ html {
     justify-content: center;
     transition: 0.5s;
 }
+
 .loading img{
     position: absolute;
     width: 80vw; 
     height: 90vh; 
     opacity: 0;
-    /* left: 10vw; */
     top: -30vh;
     object-fit: contain; 
     animation: moving 1s linear forwards;
@@ -26,26 +26,26 @@ html {
 
 .loading .progressbar{
     position: absolute;
-    width: 0vw; 
+    width: 80vw; 
     height: 1vh;
-    background-color: #ddd;
+    background-color: #999;
     border-radius: 50px;
     left: 10vw;
     bottom: 10vh; 
-    opacity: 1; 
-    animation: moving2 3s 1s infinite linear forwards;
+    opacity: 0; 
+    animation: moving3 0.1s 1s linear forwards;
     overflow-x: hidden;
 }
 
 .loading .progressbar div{
-    width: 100%; 
+    width: 0%; 
     height: 1vh;
+    animation: moving2 3s 1s infinite linear forwards;
     background-color: #fff;
 }
 
 @keyframes moving {
-    from {
-    }
+    from {}
     to {
         top: 0vh; 
         opacity: 1; 
@@ -53,10 +53,16 @@ html {
 }
 
 @keyframes moving2 {
-    from{
-
-    }
+    from{}
     to {
-        width: 80vw; 
+        width: 100%; 
+    }
+}
+
+
+@keyframes moving3 {
+    from{}
+    to {
+        opacity: 1; 
     }
 }
