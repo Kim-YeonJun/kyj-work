@@ -348,7 +348,12 @@ section {
 }
 
 .project .box_container .box:hover  {
+    transform: scale(1.1);
     box-shadow: 0px 0px 1rem rgba(0, 174, 239, 0.7);
+}
+
+.project .box_container .box:active  {
+    transform: scale(1.0);
 }
 
 .project .box_container .box .card  {
@@ -358,8 +363,8 @@ section {
 .project .box_container .box .card img{
     width: 100%; 
     height: 100%;
-    object-fit: cover;
     /* border: 1px solid black; */
+    object-fit: cover;
 }
 
 .project .box_container .box .content {
@@ -560,6 +565,7 @@ section {
     text-align: center;
     font-family: 'MapoDPP';
     cursor: pointer;
+    z-index: 10;
 }
 .goToHome #gotoHome-btn span{
     position: absolute;
@@ -590,3 +596,125 @@ section {
 
 /* 스크롤 맵위 버튼 끝 */
 
+
+/* 미디어 쿼리 */
+
+
+@media (max-width : 768px) {
+    /* ipad mini 기준  768px 1024px*/
+
+    .location .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 1000px;
+        margin-top: 5rem;
+        /* border: 1px solid black; */
+    }
+
+    .location .container #map {
+        width: 100%;
+        height: 47.5%;
+        margin-bottom: 2.5%;
+        /* box-shadow: 0 2px 5px rgba(0,0,0, 0.3); */
+    }
+    
+    .location .container .info {
+        width: 100%;
+        height: 47.5%;
+        margin-top: 2.5%;
+        word-break: keep-all;
+        margin: 0;
+
+        display: grid;
+        grid-template-columns: repeat(1, minmax(4rem, 1fr) 2fr);
+        gap: 0.4rem;
+        /* border: 1px solid black; */
+    }
+
+    .goToHome #gotoHome-btn:hover{
+        color: var(--maposkyblue1);
+        background-color: var(--mapowhite);
+    }
+}
+
+
+@media (max-width : 540px) {
+    /* surface duo 기준 540px 720px */
+    
+    html {
+        font-size: 8px;
+    }
+
+    .header .icons{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        white-space: nowrap;
+        height: calc(100vh - 9.5rem);
+        transition: 0.2s;
+        z-index: 1;
+    }
+
+    .header .overlay_navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }   
+    
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .overlay_navbar.active{
+        display: block;
+    }
+
+    .header .navbar a{
+        color: var(--bg2);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 3rem;
+        border-bottom: 1px solid var(--mapogray);
+    }
+
+    .header .navbar a:hover{
+        color: var(--mapowhite);
+        border-radius: 10px;
+        background-color : var(--bg2);
+        transform: scale(1.05);
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column ;
+        word-break: keep-all;
+        text-align: center;
+    }
+
+    .footer .mapofont {
+        width: 100%;
+        height: 6.5rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid brown; */
+    }
+    
+    .footer .mapofont #selectfont{
+        width: 25%;
+    }
+}
