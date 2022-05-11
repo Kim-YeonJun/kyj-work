@@ -1,4 +1,39 @@
-@import url("./newfont.css");
+@font-face {
+    font-family: 'MapoAgape';
+    src: url('../font/MapoAgape.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoBackpacking';
+    src: url('../font/MapoBackpacking.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoDacapo';
+    src: url('../font/MapoDacapo.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoDPP';
+    src: url('../font/MapoDPP.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('../font/MapoFlowerIsland.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('../font/MapoGoldenPier.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoHongdaeFreedom';
+    src: url('../font/MapoHongdaeFreedom.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoMaponaru';
+    src: url('../font/MapoMaponaru.woff') format('woff');
+}
+@font-face {
+    font-family: 'MapoPeacefull';
+    src: url('../font/MapoPeacefull.woff') format('woff');
+}
 
 :root {
     --main-color: #d3ad7f;
