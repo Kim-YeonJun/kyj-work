@@ -40,7 +40,7 @@ html {
 .loading .progressbar div{
     width: 0%; 
     height: 1vh;
-    animation: moving2 0.3s 0.3s infinite linear forwards;
+    animation: moving2 0.3s 0.3s linear forwards;
     background-color: #fff;
 }
 
