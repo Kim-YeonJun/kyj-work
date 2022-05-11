@@ -92,7 +92,7 @@
             setTimeout(() => {
                 loading.style.display = 'none';
             }, 300);
-        }, 600);
+        }, 700);
     });
 
     //폰트 체인지 시작
