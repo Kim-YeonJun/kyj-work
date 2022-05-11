@@ -23,7 +23,7 @@ html {
     object-fit: contain; 
     animation: moving 0.3s linear forwards;
 }
-
+/* 
 .loading .progressbar{
     position: absolute;
     width: 80vw; 
@@ -42,7 +42,7 @@ html {
     height: 1vh;
     animation: moving2 0.3s 0.3s infinite linear forwards;
     background-color: #fff;
-}
+} */
 
 @keyframes moving {
     from {}
