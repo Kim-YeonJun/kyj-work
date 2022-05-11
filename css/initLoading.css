@@ -21,7 +21,7 @@ html {
     opacity: 0;
     top: -30vh;
     object-fit: contain; 
-    animation: moving 0.3s linear forwards;
+    animation: moving 1s linear forwards;
 }
 
 .loading .progressbar{
@@ -33,14 +33,14 @@ html {
     left: 10vw;
     bottom: 10vh; 
     opacity: 0; 
-    animation: moving3 0.1s 0.3s linear forwards;
+    animation: moving3 0.1s 1s linear forwards;
     overflow-x: hidden;
 }
 
 .loading .progressbar div{
     width: 0%; 
     height: 1vh;
-    animation: moving2 0.3s 0.3s linear forwards;
+    animation: moving2 0.3s 1s linear forwards;
     background-color: #fff;
 }
 
