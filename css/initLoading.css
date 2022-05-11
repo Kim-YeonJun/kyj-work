@@ -22,7 +22,7 @@ html {
     background: url(../images/Black_Negative.png) no-repeat;
     background-size: contain;
     background-position: center;
-    animation: moving 1s 0.1s linear forwards;
+    animation: moving 0.5s 0.1s linear forwards;
 }
 
 .loading .progressbar{
