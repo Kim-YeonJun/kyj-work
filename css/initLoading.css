@@ -8,7 +8,7 @@ html {
     z-index: 2000; 
     width: 100%; 
     height: 100vh; 
-    background-color: #000; 
+    background-color: skyblue; 
     display: flex;
     justify-content: center;
     transition: 0.3s;
@@ -23,7 +23,7 @@ html {
     object-fit: contain; 
     animation: moving 0.3s linear forwards;
 }
-/* 
+
 .loading .progressbar{
     position: absolute;
     width: 80vw; 
@@ -42,7 +42,7 @@ html {
     height: 1vh;
     animation: moving2 0.3s 0.3s infinite linear forwards;
     background-color: #fff;
-} */
+}
 
 @keyframes moving {
     from {}
