@@ -38,8 +38,18 @@ html {
 
 /*  스크롤바 제어  */
 html::-webkit-scrollbar {
-    width: 0.0rem;
+    width: .5rem;
 }
+
+html::-webkit-scrollbar-track {
+    background: black;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+} 
+
 
 section {
     padding: 2rem 7%;
@@ -628,7 +638,7 @@ section {
     /* surface duo 기준 540px 720px */
     
     html {
-        font-size: 8px;
+        font-size: 5.5px;
     }
 
     /* 헤드세션 */
@@ -679,6 +689,15 @@ section {
         border-radius: 10px;
         background-color : var(--bg2);
         transform: scale(1.05);
+    }
+
+    /* 홈세션 */
+    .home {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        background:transparent;
     }
 
     /* 프로젝트세션 */
