@@ -86,13 +86,14 @@
             map.setZoomable(false);
             //해당 포지견으로 맵 중심을 이동시깁니다.
             map.panTo(changePosition);
+            loading.style.transition = '0.3s';
             loading.style.opacity = 0;
             document.documentElement.style.overflow = 'visible';
 
             setTimeout(() => {
                 loading.style.display = 'none';
             }, 300);
-        }, 700);
+        }, 1700);
     });
 
     //폰트 체인지 시작

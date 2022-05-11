@@ -11,16 +11,17 @@ html {
     background-color: black; 
     display: flex;
     justify-content: center;
-    transition: 0.3s;
 }
 
-.loading img{
+.loading .loadingimg{
     position: absolute;
     width: 80vw; 
     height: 90vh; 
     opacity: 0;
     top: -30vh;
-    object-fit: contain; 
+    background: url(../images/Black_Negative.png) no-repeat;
+    background-size: contain;
+    background-position: center;
     animation: moving 1s 0.1s linear forwards;
 }
 
@@ -33,14 +34,14 @@ html {
     left: 10vw;
     bottom: 10vh; 
     opacity: 0; 
-    animation: moving3 0.1s 1.5s linear forwards;
+    animation: moving3 0.1s 1s linear forwards;
     overflow-x: hidden;
 }
 
 .loading .progressbar div{
     width: 0%; 
     height: 1vh;
-    animation: moving2 0.3s 1.5s linear forwards;
+    animation: moving2 0.3s 1s linear forwards;
     background-color: #fff;
 }
 
