@@ -94,7 +94,7 @@
                 loading.style.display = 'none';
                 document.documentElement.style.overflow = 'visible'; 
             }, 500);
-        }, 4000);
+        }, 1000);
     });
     //
     

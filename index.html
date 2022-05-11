@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" class="html">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Chrome">
@@ -8,324 +9,296 @@
     <meta name="keyword" content="mapo, 마포형, 일자리, 마포, 사업단">
     <meta name="description" content="마포 청년 일자리 사업단을 소개하는 사이트입니다.">
     <meta name="author" content="YeonJun Kim">
-    <link rel="shortcut icon" href="https://portfolio-kyj.shop/images/%ED%9C%98%EC%9E%A5%20%EC%83%89%EC%83%81%ED%99%9C%EC%9A%A9_Black_Negative.png">
+    <link rel="shortcut icon"
+        href="https://portfolio-kyj.shop/images/Black_Negative.png">
 
     <!-- open graph -->
-    <meta property="og:image" content="https://portfolio-kyj.shop/images/%ED%9C%98%EC%9E%A5%20%EC%83%89%EC%83%81%ED%99%9C%EC%9A%A9_Black_Negative.png">
+    <meta property="og:image"
+        content="https://portfolio-kyj.shop/images/Black_Negative.png">
     <meta property="og:description" content="마포 청년 일자리 사업단을 소개하는 사이트입니다.">
     <meta property="og:title" content="마포청년 일자리 사업단">
-    <!-- open graph -->
 
     <title>마포청년 일자리 사업단</title>
 
-    <!-- 로딩 화면 시작-->
+    <!-- START Loading -->
     <link rel="stylesheet" href="./css/initLoading.css">
     <script async src="./js/initLoading.js"></script>
-    <!-- 로딩 화면 끝-->
-    
+
     <!-- CSS 로딩 -->
     <link rel="stylesheet" href="./css/style.css">
+
     <!-- kakao map api  -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c835a0cdeec02c6a2c5230355156b69"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3c835a0cdeec02c6a2c5230355156b69"></script>
+
     <!-- youtube api -->
     <script src="https://www.youtube.com/iframe_api"></script>
+
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/f986ab5e2d.js" crossorigin="anonymous"></script>
+
     <!-- custom js file link -->
     <script defer src="./js/main.js"></script>
 </head>
+
 <body>
-        
-    <!-- 처음 화면 페이지  start-->
+
+    <!-- START Loading Screen-->
     <div class="loading">
-        <img src="./images/휘장 색상활용_Black_Negative.png">
+        <img src="./images/Black_Negative.png" alt="black_logo">
         <div class="progressbar">
             <div></div>
         </div>
     </div>
-    <!-- 처음 화면 페이지  end-->
-    
-    <!-- top로 올려주는 버튼 start  -->
+
+    <!-- START Move ScrollTop  -->
     <div class="goToHome">
         <div id="gotoHome-btn">↑<span>Top</span></div>
     </div>
     <div class="now_whatis_fontname"></div>
-    <!-- top로 올려주는 버튼 end  -->
 
-    <!-- 헤더 section starts -->
-<header class="header">
-    <a href="#" class="logo">
-        <img src="./images/휘장 색상활용_Black_Negative.png" alt="">
-    </a>
-
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">마청단?</a>
-        <a href="#interview">인터뷰</a>
-        <a href="#project">프로젝트</a>
-        <a href="#location">오시는길</a>
-    </nav>
-    
-    <!-- 브라우저 크기 768이하일때 작동 start -->
-    <div class="overlay_navbar">1214132</div>
-    <div class="icons">
-        <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
-    <!-- 브라우저 크기 768이하일때 작동 end -->
-</header>
-
-<!-- 헤더 section ends -->
-
-<!-- home section starts -->
-
-<section class="home" id="home">
-    <div class="content">
-        <div class="slidePanel">
-            <div id="imgPanel1" class="mySlides">
-                <h3>캐릭터 디자인팀</h3>
-                <img src="./images/home_bg1.png" alt="">
-            </div>
-            <div id="imgPanel2" class="mySlides">
-                <h3>개발&UIUX팀</h3>
-                <img src="./images/home_bg2.png" alt="">
-            </div>
-            <div id="imgPanel3" class="mySlides">
-                <h3>회의실</h3>
-                <img src="./images/home_bg3.png" alt="">
-            </div>
-            <div id="imgPanel4" class="mySlides">
-                <h3>개발&UIUX팀</h3>
-                <img src="./images/home_bg4.png" alt="">
-            </div>
-            <div id="imgPanel5" class="mySlides">
-                <h3>1층 사업단 사무실</h3>
-                <img src="./images/home_bg5.png" alt="">
-            </div>
-            <div id="imgPanel6" class="mySlides">
-                <h3>회의실</h3>
-                <img src="./images/home_bg6.png" alt="">
-            </div>
-            <div id="imgPanel7" class="mySlides">
-                <h3>마포구청</h3>
-                <img src="./images/bg7.png" alt="">
-            </div>
-            <div id="imgPanel8" class="mySlides">
-                <h3>마포구청</h3>
-                <img src="./images/bg8.png" alt="">
-            </div>
+    <!-- START header section  -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./images/Black_Negative.png" alt="black_logo">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">마청단?</a>
+            <a href="#interview">인터뷰</a>
+            <a href="#project">프로젝트</a>
+            <a href="#location">오시는길</a>
+        </nav>
+        <!-- 브라우저 크기 768이하일때 작동 start -->
+        <div class="overlay_navbar">1214132</div>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- home section ends -->
-
-
-<!-- about section starts -->
-
-<section class="about" id="about">
-
-    <h1 class="heading">마.<span>청.</span>단?</h1>
-    <div class="row">
-        <div class="image">
-            <img src="images/2022.jpg">
-        </div>
-
+    <!-- START home section -->
+    <section class="home" id="home">
         <div class="content">
-            <h3>마포 <span>청</span>년 일자리 사업단</h3>
-
-            <p>'마포형 청년일자리 사업'은 "미취업 청년에게 최고의 복지는 일자리 제공이다"라는 청년 일자리 사업에 대한 유동균 마포구청장님의 철학을 담은 민선 7기 역점 사업입니다.</p>
-
-            <p>2019년 첫 번째 마포 청년일자리 사업이자 전국 최초로 시도한 '마포서체 개발 프로젝트'는 2020년 청년들이 개발한 9종의 서체가 한컴오피스에 등재되고 2021년에는 MS오피스에 4종의 서체가 탑재되는 성과를 이뤄냈습니다.</p>
-        </div>
-    </div>
-    
-</section>
-
-<!-- about section ends -->
-
-
-<!-- interview section starts -->
-
-<section class="interview" id="interview">
-    <h1 class="heading">인터뷰</h1>
-    <div class="box_container">
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.</p>
-                <h3><span>일자리지원과 팀장</span> </h3>
+            <div class="slidePanel">
+                <div id="imgPanel1" class="mySlides">
+                    <h3>캐릭터 디자인팀</h3>
+                    <img src="./images/home_bg1.png" alt="home_bg">
+                </div>
+                <div id="imgPanel2" class="mySlides">
+                    <h3>개발&UIUX팀</h3>
+                    <img src="./images/home_bg2.png" alt="home_bg">
+                </div>
+                <div id="imgPanel3" class="mySlides">
+                    <h3>회의실</h3>
+                    <img src="./images/home_bg3.png" alt="home_bg">
+                </div>
+                <div id="imgPanel4" class="mySlides">
+                    <h3>개발&UIUX팀</h3>
+                    <img src="./images/home_bg4.png" alt="home_bg">
+                </div>
+                <div id="imgPanel5" class="mySlides">
+                    <h3>1층 사업단 사무실</h3>
+                    <img src="./images/home_bg5.png" alt="home_bg">
+                </div>
+                <div id="imgPanel6" class="mySlides">
+                    <h3>회의실</h3>
+                    <img src="./images/home_bg6.png" alt="home_bg">
+                </div>
+                <div id="imgPanel7" class="mySlides">
+                    <h3>마포구청</h3>
+                    <img src="./images/bg7.png" alt="home_bg">
+                </div>
+                <div id="imgPanel8" class="mySlides">
+                    <h3>마포구청</h3>
+                    <img src="./images/bg8.png" alt="home_bg">
+                </div>
             </div>
         </div>
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.</p>
-                <h3><span>일자리 사업단 매니저</span> 김진순</h3>
-            </div>
-        </div>
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.</p>
-                <h3><span>일자리 사업단 PM</span> 서지혜</h3>
-            </div>
-        </div>
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.</p>
-                <h3><span>캐릭터 디자인 팀리더</span></h3>
-            </div>
-        </div>
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium epellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum..</p>
-                <h3><span>방송 컨텐츠 팀리더</span></h3>
-            </div>
-        </div>
+    </section>
 
-        <div class="box">
-            <div class="card">
-                <img src="images/lion.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum.</p>
-                <h3><span>앱개발&UIUX 팀리더</span></h3>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- interview section ends -->
-
-
-<!-- project section starts -->
-
-<section class="project" id="project">
-    <h1 class="heading">프로젝트</h1>
-    <div class="box_container">
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/jA6qktqkHRU/0.jpg" alt="">
+    <!-- START about section -->
+    <section class="about" id="about">
+        <h1 class="heading">마.<span>청.</span>단?</h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/2022.jpg" alt="recruitment">
             </div>
             <div class="content">
-                방송컨텐츠팀
+                <h3>마포 <span>청</span>년 일자리 사업단</h3>
+                <p>'마포형 청년일자리 사업'은 "미취업 청년에게 최고의 복지는 일자리 제공이다"라는 청년 일자리 사업에 대한 유동균 마포구청장님의 철학을 담은 민선 7기 역점 사업입니다.</p>
+                <p>2019년 첫 번째 마포 청년일자리 사업이자 전국 최초로 시도한 '마포서체 개발 프로젝트'는 2020년 청년들이 개발한 9종의 서체가 한컴오피스에 등재되고 2021년에는 MS오피스에
+                    4종의 서체가 탑재되는 성과를 이뤄냈습니다.</p>
             </div>
         </div>
+    </section>
 
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/X34whsyzUXs/0.jpg" alt="">
+
+    <!-- START interview section -->
+    <section class="interview" id="interview">
+        <h1 class="heading">인터뷰</h1>
+        <div class="box_container">
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        tenetur asperiores voluptate laborum.</p>
+                    <h3><span>일자리지원과 팀장</span> </h3>
+                </div>
             </div>
-            <div class="content">
-                방송컨텐츠팀
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        tenetur asperiores voluptate laborum.</p>
+                    <h3><span>일자리 사업단 매니저</span> 김진순</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        tenetur asperiores voluptate laborum.</p>
+                    <h3><span>일자리 사업단 PM</span> 서지혜</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        tenetur asperiores voluptate laborum.</p>
+                    <h3><span>캐릭터 디자인 팀리더</span></h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        corrupti tempore illo. Quas fugit ducimus cum praesentium tenetur asperiores voluptate laborum..
+                    </p>
+                    <h3><span>방송 컨텐츠 팀리더</span></h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="images/lion.png" alt="interview_img">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id itaque non perferendis! Repellendus
+                        commodi quidem dolores, omnis natus corrupti tempore illo. Quas fugit ducimus cum praesentium
+                        tenetur asperiores voluptate laborum.</p>
+                    <h3><span>앱개발&UIUX 팀리더</span></h3>
+                </div>
+            </div>
+
+        </div>
+    </section> <!-- END interview section -->
+
+
+    <!-- START project section -->
+    <section class="project" id="project">
+        <h1 class="heading">프로젝트</h1>
+        <div class="box_container">
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/jA6qktqkHRU/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/X34whsyzUXs/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/wKG_yI6KqIc/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/6GId5k0k_VU/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/ZKYHP3HyTGM/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/0kKOs6dmI90/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <img src="https://img.youtube.com/vi/qR5jjhvxYuU/0.jpg" alt="youtube_img">
+                </div>
+                <div class="content">
+                    방송컨텐츠팀
+                </div>
             </div>
         </div>
+    </section> <!-- END project section -->
 
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/wKG_yI6KqIc/0.jpg" alt="">
-            </div>
-            <div class="content">
-                방송컨텐츠팀
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/6GId5k0k_VU/0.jpg" alt="">
-            </div>
-            <div class="content">
-                방송컨텐츠팀
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/ZKYHP3HyTGM/0.jpg" alt="">
-            </div>
-            <div class="content">
-                방송컨텐츠팀
+    <!-- START location section -->
+    <section class="location" id="location">
+        <h1 class="heading">찾아오시는 <span>길</span></h1>
+        <div class="container">
+            <!-- START 카카오맵 api 구현 -->
+            <div id="map"></div>
+            <div class="info">
+                <p id="tag1" class="tbName">주소</p>
+                <p id="tag2" class="content">서울 마포구 성산로4길 53 前)마포구청 제3별관</p>
+                <p id="tag3" class="tbName">전화 번호</p>
+                <p id="tag4" class="content">02-3153-8555</p>
+                <p id="tag5" class="tbName">대중 교통</p>
+                <p id="tag6" class="content transfer">버스</p>
+                <p id="tag7" class="content">마포 중앙도서관 정류장(14196)</p>
+                <p id="tag8" class="content">6714, 601, 606, 672, 674</p>
+                <p id="tag9" class="content">마포 중앙도서관 정류장(14197) </p>
+                <p id="tag10" class="content">6714, 601, 606, 672, 674</p>
+                <p id="tag11" class="content transfer">지하철</p>
+                <p id="tag12" class="content">지하철 6호선 마포구청역 3번출구 약500m(도보 10분)</p>
             </div>
         </div>
+    </section>
 
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/0kKOs6dmI90/0.jpg" alt="">
-            </div>
-            <div class="content">
-                방송컨텐츠팀
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="card">
-                <img src="https://img.youtube.com/vi/qR5jjhvxYuU/0.jpg" alt="">
-            </div>
-            <div class="content">
-                방송컨텐츠팀
-            </div>
-        </div>
-
-    </div>
-    
-</section>
-
-<!-- project section ends -->
-
-
-<!-- location section starts -->
-
-<section class="location" id="location">
-    <h1 class="heading">찾아오시는 <span>길</span></h1>
-
-    <div class="container">
-        <!-- 카카오맵 api 구현 start -->
-        <div id="map"></div>  
-        <!-- 카카오맵 api 구현 end -->
-
-        <div class="info">
-            <p id="tag1"class="tbName">주소</p>
-            <p id="tag2"class="content">서울 마포구 성산로4길 53 前)마포구청 제3별관</p>
-            <p id="tag3" class="tbName">전화 번호</p>
-            <p id="tag4" class="content">02-3153-8555</p>
-            <p id="tag5" class="tbName">대중 교통</p>
-            <p id="tag6" class="content transfer">버스</p>
-            <p id="tag7" class="content">마포 중앙도서관 정류장(14196)</p>
-            <p id="tag8" class="content">6714, 601, 606, 672, 674</p>
-            <p id="tag9" class="content">마포 중앙도서관 정류장(14197) </p>
-            <p id="tag10" class="content">6714, 601, 606, 672, 674</p>
-            <p id="tag11" class="content transfer">지하철</p>
-            <p id="tag12" class="content">지하철 6호선 마포구청역 3번출구 약500m(도보 10분)</p>
-        </div>  
-    </div>
-</section>
-
-<!-- location section ends -->
-
-
-<!--  footer section starts-->
-
+    <!--  START footer section-->
     <section class="footer">
-        <img src="./images/휘장 색상활용_Silver_Negative_s.png" alt="">
-
-        <!-- 사이트 개발 회사 정보 start -->
+        <img src="./images/Silver_Negative_s.png" alt="silver_logo">
+        <!-- START 사이트 개발 회사 정보 -->
         <div class="container">
             <div class="links">
                 <a href="https://www.mapo.go.kr/html/corona/intro.htm">마포구청</a>
                 <span>|</span>
                 <a href="https://job.seoul.go.kr/mapo/Main.do?method=getMain">마포구 일자리 센터</a>
                 <span>|</span>
-                <a href="https://job.seoul.go.kr/www/newdeal/jbhnt_mngr/newDealJbhntMngrWww.do?method=getNewDealMain">뉴딜 일자리</a>
+                <a href="https://job.seoul.go.kr/www/newdeal/jbhnt_mngr/newDealJbhntMngrWww.do?method=getNewDealMain">뉴딜일자리</a>
             </div>
-            <div class="address">
-                03965 서울특별시 마포구 성산로4길 53 (성산동) , TEL. 02-3153-8555
-            </div>
+            <div class="address">03965 서울특별시 마포구 성산로4길 53 (성산동) , TEL. 02-3153-8555</div>
             <div class="credit">created by <span>mr.Kim Developer</span> | all rights reserved</div>
         </div>
-        <!-- 사이트 개발 회사 정보 end -->
-
-        <!-- 사이트 폰트 선택 start -->
+        <!-- START 사이트 폰트 선택 -->
         <div class="mapofont">
             <div>사이트 서체</div>
             <select name="fontname" id="selectfont">
@@ -340,11 +313,6 @@
                 <option value="8">한아름</option>
             </select>
         </div>
-        <!-- 사이트 폰트 선택 end -->
-    </section>
-
-<!--  footer section ends-->
-
-
+    </section> <!--  END footer section-->
 </body>
 </html>

@@ -1,72 +1,45 @@
 
 @font-face {
     font-family: 'MapoAgape';
-    src:url('../font/MapoAgape.eot') format('eot'),
-        url('../font/MapoAgape.svg') format('svg'), 
-        url('../font/MapoAgape.woff2') format('woff2'),
-        url('../font/MapoAgape.woff') format('woff');
+    src: url('../font/MapoAgape.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoBackpacking';
-    src:url('../font/MapoBackpacking.eot') format('eot'),
-        url('../font/MapoBackpacking.svg') format('svg'), 
-        url('../font/MapoBackpacking.woff2') format('woff2'),
-        url('../font/MapoBackpacking.woff') format('woff');
+    src: url('../font/MapoBackpacking.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoDacapo';
-    src:url('../font/MapoDacapo.eot') format('eot'),
-        url('../font/MapoDacapo.svg') format('svg'), 
-        url('../font/MapoDacapo.woff2') format('woff2'),
-        url('../font/MapoDacapo.woff') format('woff');
+    src: url('../font/MapoDacapo.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoDPP';
-    src:url('../font/MapoDPP.eot') format('eot'),
-        url('../font/MapoDPP.svg') format('svg'), 
-        url('../font/MapoDPP.woff2') format('woff2'),
-        url('../font/MapoDPP.woff') format('woff');
+    src: url('../font/MapoDPP.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoFlowerIsland';
-    src:url('../font/MapoFlowerIsland.eot') format('eot'),
-        url('../font/MapoFlowerIsland.svg') format('svg'), 
-        url('../font/MapoFlowerIsland.woff2') format('woff2'),
-        url('../font/MapoFlowerIsland.woff') format('woff');
+    src: url('../font/MapoFlowerIsland.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoGoldenPier';
-    src:url('../font/MapoGoldenPier.eot') format('eot'),
-        url('../font/MapoGoldenPier.svg') format('svg'), 
-        url('../font/MapoGoldenPier.woff2') format('woff2'),
-        url('../font/MapoGoldenPier.woff') format('woff');
+    src: url('../font/MapoGoldenPier.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoHongdaeFreedom';
-    src:url('../font/MapoHongdaeFreedom.eot') format('eot'),
-        url('../font/MapoHongdaeFreedom.svg') format('svg'), 
-        url('../font/MapoHongdaeFreedom.woff2') format('woff2'),
-        url('../font/MapoHongdaeFreedom.woff') format('woff');
+    src: url('../font/MapoHongdaeFreedom.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoMaponaru';
-    src:url('../font/MapoMaponaru.eot') format('eot'),
-        url('../font/MapoMaponaru.svg') format('svg'), 
-        url('../font/MapoMaponaru.woff2') format('woff2'),
-        url('../font/MapoMaponaru.woff') format('woff');
+    src: url('../font/MapoMaponaru.woff') format('woff');
 }
 
 @font-face {
     font-family: 'MapoPeacefull';
-    src:url('../font/MapoPeacefull.eot') format('eot'),
-        url('../font/MapoPeacefull.svg') format('svg'), 
-        url('../font/MapoPeacefull.woff2') format('woff2'),
-        url('../font/MapoPeacefull.woff') format('woff');
+    src: url('../font/MapoPeacefull.woff') format('woff');
 }
