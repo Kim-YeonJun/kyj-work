@@ -662,6 +662,7 @@ section {
         gap: 0.4rem;
     }
 
+    /* 스크롤 맵위 버튼 */
     .goToHome #gotoHome-btn:hover{
         color: var(--maposkyblue1);
         background-color: var(--mapowhite);
@@ -728,11 +729,11 @@ section {
 
     /* 홈세션 */
     .home {
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        position: relative;
-        background:transparent;
+        height: 50vh;
+    }
+
+    .home .content .slidePanel .mySlides img {
+        height: 50vh;
     }
 
     /* 프로젝트세션 */
@@ -772,6 +773,15 @@ section {
     
     .footer .mapofont #selectfont{
         width: 25%;
+    }
+
+    /* 스크롤 맵위 버튼 */
+    .goToHome #gotoHome-btn{
+        padding: 4px 8px;
+    }
+    .goToHome #gotoHome-btn span{
+        font-size: 1px;
+        left: 8px;
     }
 
 }
