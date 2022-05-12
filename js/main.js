@@ -190,6 +190,12 @@
     //modal youtube 페이지
     const card = document.querySelectorAll('.project .box_container .box .card');
     const modal = document.querySelector('.modal');
+    const tag = document.createElement('script');
+    
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
     let ytPlayer = null;
 
     function onYouTubeIframeAPIReady() {
