@@ -188,36 +188,33 @@
     } //맨 위로 올라가는 버튼관려 이벤트 끝
 
     //modal youtube 페이지
-    const card = document.querySelector('.project .box_container .box .card');
+    const card = document.querySelectorAll('.project .box_container .box .card');
     const modal = document.querySelector('.modal');
     let ytPlayer = null;
 
     function onYouTubeIframeAPIReady() {
-        console.log('ready',);
         ytPlayer = new YT.Player('ytPlayer', {
             height: '100%',
             width: '100%',
-            videoId: 'M7lc1UVf-VE'
+            videoId: ''
         });
     }
 
     window.onclick = (e) => {
-        console.log('e.target.parentNode',e.target.parentNode);
-        console.log('box',box);
-        console.log('ytPlayer', ytPlayer);
-
         if (e.target === modal) {
-            if(YT.PlayerState.PLAYING){
-                ytPlayer.stopVideo();
-            }
+            ytPlayer.stopVideo();
             modal.style.display = 'none';
-        } else if(e.target.parentNode === card){
-            console.log('box.dataset', card.dataset);
-            ytPlayer.loadVideoById({'videoId': card.dataset.ytid });
-            modal.style.display = 'flex';
-        }
-
+            return;
+        } 
         
+        card.forEach((it) => {
+            if(e.target.parentNode === it){
+                // ytPlayer.cueVideoById({'videoId': it.dataset.ytid});
+                ytPlayer.loadVideoById({'videoId': it.dataset.ytid});
+                modal.style.display = 'flex';
+                return;
+            }
+        });
     };
 
 }

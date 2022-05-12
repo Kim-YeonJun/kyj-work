@@ -655,8 +655,6 @@ section {
     /* position: absolute; */
     width: 50%;
     height: 50%;
-    background: red;
-    
 }
 
 /* 미디어 쿼리 */
@@ -694,6 +692,13 @@ section {
     .goToHome #gotoHome-btn:hover {
         color: var(--maposkyblue1);
         background-color: var(--mapowhite);
+    }
+
+    /* YTplayer */
+    .modal #ytPlayer {
+        /* position: absolute; */
+        width: 70%;
+        height: 70%;
     }
 }
 
