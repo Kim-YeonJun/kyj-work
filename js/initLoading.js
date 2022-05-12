@@ -1,4 +1,4 @@
 {
     const img = new Image();
-    img.src = "./images/Black_Negative.png";
+    img.src = "./images/Black_Negative.jpg";
 }
