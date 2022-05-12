@@ -193,6 +193,7 @@
     let ytPlayer = null;
 
     function onYouTubeIframeAPIReady() {
+        console.log('api commplete');
         ytPlayer = new YT.Player('ytPlayer', {
             height: '100%',
             width: '100%',
