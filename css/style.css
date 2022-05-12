@@ -281,6 +281,11 @@ section {
     border-image-slice: 1;
 }
 
+.interview .qusetion span{
+    color: var(--maposkyblue);
+}
+
+
 .interview .box_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -313,14 +318,24 @@ section {
     box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.5);
 }
 
-.interview .box_container .box .card img {
-    object-fit: cover;
+.interview .box_container .box .card .imgpanel {
+    border: 1rem solid white;
     border-radius: 50%;
     width: 15rem;
     min-height: 15rem;
     position: absolute;
     top: -7rem;
-    border: 1rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.interview .box_container .box .card .imgpanel img {
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    object-fit: contain;
 }
 
 .interview .box_container .box .card h3 {
@@ -336,12 +351,17 @@ section {
     color: #fff;
 }
 
-.interview .box_container .box .card p {
+.interview .box_container .box .card .answer {
     position: absolute;
     padding: 9rem 4rem;
     color: #333;
     font-size: 1.5rem;
-} /* 인터뷰 섹션  끝*/
+} 
+
+.interview .box_container .box .card .answer span {
+    color: tomato;
+}
+/* 인터뷰 섹션  끝*/
 
 /* 프로젝트 섹션  시작*/
 .project {

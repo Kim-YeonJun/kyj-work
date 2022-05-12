@@ -201,8 +201,8 @@
     function onYouTubeIframeAPIReady() {
         console.log('api commplete');
         ytPlayer = new YT.Player('ytPlayer', {
-            height: '100%',
-            width: '100%',
+            height: '200',
+            width: '300',
             videoId: ''
         });
     }
