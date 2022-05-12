@@ -86,6 +86,8 @@
             map.setZoomable(false);
             //해당 포지견으로 맵 중심을 이동시깁니다.
             map.panTo(changePosition);
+
+            //로딩화면 제어
             loading.style.transition = '0.3s';
             loading.style.opacity = 0;
             document.documentElement.style.overflow = 'visible';
@@ -186,7 +188,41 @@
     } //맨 위로 올라가는 버튼관려 이벤트 끝
 
     //modal youtube 페이지
-    function test() {
-        alert("testtsst");
+    const modal = document.querySelector('.modal')
+    const ytPlayer = document.querySelector('.tyPlayer');
+
+    window.onclick = (e) => {
+        console.log('e.target', e.target);
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    let player;
+    function onYouTubeIframeAPIReady() {
+        console.log('ready',);
+        player = new YT.Player('ytPlayer', {
+            height: '360',
+            width: '640',
+            videoId: 'M7lc1UVf-VE',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    let done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
     }
 }
