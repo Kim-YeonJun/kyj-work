@@ -90,7 +90,7 @@
             //로딩화면 제어
             loading.style.transition = '0.3s';
             loading.style.opacity = 0;
-            document.documentElement.style.overflow = 'visible';
+            document.documentElement.style.overflowY = 'visible';
 
             setTimeout(() => {
                 loading.style.display = 'none';
@@ -204,6 +204,7 @@
         if (e.target === modal) {
             ytPlayer.stopVideo();
             modal.style.display = 'none';
+            rootDom.style.overflowY = 'visible';
             return;
         } 
         
@@ -212,6 +213,8 @@
                 // ytPlayer.cueVideoById({'videoId': it.dataset.ytid});
                 ytPlayer.loadVideoById({'videoId': it.dataset.ytid});
                 modal.style.display = 'flex';
+                rootDom.style.overflowY = 'hidden';
+                console.log('rootDom',rootDom);
                 return;
             }
         });

@@ -1,46 +1,46 @@
 @font-face {
-    font-family: 'MapoAgape';
-    src: url('../font/MapoAgape.woff') format('woff');
+    font-family: "MapoAgape";
+    src: url("../font/MapoAgape.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoBackpacking';
-    src: url('../font/MapoBackpacking.woff') format('woff');
+    font-family: "MapoBackpacking";
+    src: url("../font/MapoBackpacking.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoDacapo';
-    src: url('../font/MapoDacapo.woff') format('woff');
+    font-family: "MapoDacapo";
+    src: url("../font/MapoDacapo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoDPP';
-    src: url('../font/MapoDPP.woff') format('woff');
+    font-family: "MapoDPP";
+    src: url("../font/MapoDPP.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoFlowerIsland';
-    src: url('../font/MapoFlowerIsland.woff') format('woff');
+    font-family: "MapoFlowerIsland";
+    src: url("../font/MapoFlowerIsland.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoGoldenPier';
-    src: url('../font/MapoGoldenPier.woff') format('woff');
+    font-family: "MapoGoldenPier";
+    src: url("../font/MapoGoldenPier.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoHongdaeFreedom';
-    src: url('../font/MapoHongdaeFreedom.woff') format('woff');
+    font-family: "MapoHongdaeFreedom";
+    src: url("../font/MapoHongdaeFreedom.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoMaponaru';
-    src: url('../font/MapoMaponaru.woff') format('woff');
+    font-family: "MapoMaponaru";
+    src: url("../font/MapoMaponaru.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'MapoPeacefull';
-    src: url('../font/MapoPeacefull.woff') format('woff');
+    font-family: "MapoPeacefull";
+    src: url("../font/MapoPeacefull.woff") format("woff");
 }
 
 :root {
@@ -49,15 +49,15 @@
     --bg: #fdfdfd;
     --bg2: #000;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    --maposkyblue: #00AEEF;
+    --maposkyblue: #00aeef;
     --maposkyblue1: #008ec2;
     --mapogray: #939598;
     --mapoblack: #000;
-    --mapoblue: #005AAB;
-    --mapobasic: #D09C48;
-    --mapogreen: #71BF44;
-    --mapoorange: #F36F21;
-    --mapopink: #EC008C;
+    --mapoblue: #005aab;
+    --mapobasic: #d09c48;
+    --mapogreen: #71bf44;
+    --mapoorange: #f36f21;
+    --mapopink: #ec008c;
     --mapowhite: rgb(255, 255, 255);
 }
 
@@ -71,7 +71,7 @@
 }
 
 html {
-    font-family: 'MapoDPP';
+    font-family: "MapoDPP";
     font-size: 10px;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
@@ -80,7 +80,7 @@ html {
 
 /*  스크롤바 제어  */
 html::-webkit-scrollbar {
-    width: .5rem;
+    width: 0.5rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -113,7 +113,6 @@ section {
     z-index: 1000;
     box-shadow: 0 0 1rem #000;
     background: var(--bg2);
-
 }
 
 .header .logo img {
@@ -156,10 +155,7 @@ section {
     border-radius: 5px;
     color: var(--mapowhite);
     transform: scale(1.2);
-}
-
-/* 헤더 섹션 끝*/
-
+} /* 헤더 섹션 끝*/
 
 /* 홈 섹션  시작*/
 .home {
@@ -196,19 +192,15 @@ section {
     border-radius: 0 0 50px 0px;
 }
 
-
 @keyframes fade_in_home_img {
     from {
-        opacity: .4;
+        opacity: 0.4;
     }
 
     to {
         opacity: 1;
     }
-}
-
-/* 홈 섹션  끝*/
-
+} /* 홈 섹션  끝*/
 
 /* 마청단? 섹션  시작*/
 .about {
@@ -271,10 +263,7 @@ section {
     padding: 1.2rem 0;
     line-height: 1.8;
     word-break: keep-all;
-}
-
-/* 마청단? 섹션  끝*/
-
+} /* 마청단? 섹션  끝*/
 
 /* 인터뷰 섹션  시작*/
 .interview {
@@ -352,11 +341,7 @@ section {
     padding: 9rem 4rem;
     color: #333;
     font-size: 1.5rem;
-}
-
-/* 인터뷰 섹션  끝*/
-
-
+} /* 인터뷰 섹션  끝*/
 
 /* 프로젝트 섹션  시작*/
 .project {
@@ -395,7 +380,7 @@ section {
 }
 
 .project .box_container .box:active {
-    transform: scale(1.0);
+    transform: scale(1);
 }
 
 .project .box_container .box .card {
@@ -413,10 +398,7 @@ section {
     font-size: 3rem;
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
-
-/* 프로젝트 섹션  끝*/
-
+} /* 프로젝트 섹션  끝*/
 
 /* 오시는길 섹션  시작*/
 .location {
@@ -509,9 +491,7 @@ section {
     padding: 5px;
     background-color: var(--mapowhite);
     border: 1px solid var(--mapogray);
-}
-
-/* 오시는길 섹션  끝*/
+} /* 오시는길 섹션  끝*/
 
 /* 풋터 섹션  시작*/
 .footer {
@@ -550,7 +530,6 @@ section {
 }
 
 .footer .container .links a:hover {
-
     display: inline-block;
     transform: scale(1.1);
 }
@@ -582,9 +561,7 @@ section {
     color: var(--mapowhite);
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
-}
-
-/* 풋터 섹션  끝*/
+} /* 풋터 섹션  끝*/
 
 /* 스크롤 맵위 버튼 시작 */
 .goToHome #gotoHome-btn {
@@ -599,7 +576,7 @@ section {
     background-color: var(--mapowhite);
     opacity: 0;
     text-align: center;
-    font-family: 'MapoDPP';
+    font-family: "MapoDPP";
     cursor: pointer;
     z-index: 10;
 }
@@ -632,9 +609,7 @@ section {
     to {
         opacity: 0;
     }
-}
-
-/* 스크롤 맵위 버튼 끝 */
+} /* 스크롤 맵위 버튼 끝 */
 
 /* 유튜브 플레이어 Modal */
 .modal {
@@ -652,14 +627,12 @@ section {
 }
 
 .modal #ytPlayer {
-    /* position: absolute; */
     width: 50%;
     height: 50%;
 }
 
 /* 미디어 쿼리 */
-@media (max-width : 768px) {
-    /* ipad mini 기준  768px 1024px*/
+@media (max-width: 768px) { /* ipad mini 기준  768px 1024px*/
 
     .location .container {
         display: flex;
@@ -667,7 +640,6 @@ section {
         justify-content: center;
         height: 1000px;
         margin-top: 0rem;
-        /* border: 1px solid black; */
     }
 
     .location .container #map {
@@ -696,14 +668,12 @@ section {
 
     /* YTplayer */
     .modal #ytPlayer {
-        /* position: absolute; */
         width: 70%;
         height: 70%;
     }
 }
 
-
-@media (max-width : 540px) {
+@media (max-width: 540px) {
     /* surface duo 기준 540px 720px */
 
     html {
@@ -774,7 +744,6 @@ section {
         gap: 4rem 5rem;
     }
 
-
     /* 지도세션 */
     .location .heading {
         font-size: 6rem;
@@ -818,4 +787,9 @@ section {
         left: 8px;
     }
 
+    /* YTplayer */
+    .modal #ytPlayer {
+        width: 100%;
+        height: 75%;
+    }
 }
