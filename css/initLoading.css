@@ -18,7 +18,7 @@ html {
     width: 80vw;
     height: 90vh;
     opacity: 0;
-    top: -30vh;
+    top: 0vh;
     background: url(../images/Black_Negative.png) no-repeat;
     background-size: contain;
     background-position: center;

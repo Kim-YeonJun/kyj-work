@@ -188,41 +188,36 @@
     } //맨 위로 올라가는 버튼관려 이벤트 끝
 
     //modal youtube 페이지
-    const modal = document.querySelector('.modal')
-    const ytPlayer = document.querySelector('.tyPlayer');
+    const card = document.querySelector('.project .box_container .box .card');
+    const modal = document.querySelector('.modal');
+    let ytPlayer = null;
 
-    window.onclick = (e) => {
-        console.log('e.target', e.target);
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
-
-    let player;
     function onYouTubeIframeAPIReady() {
         console.log('ready',);
-        player = new YT.Player('ytPlayer', {
-            height: '360',
-            width: '640',
-            videoId: 'M7lc1UVf-VE',
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
+        ytPlayer = new YT.Player('ytPlayer', {
+            height: '100%',
+            width: '100%',
+            videoId: 'M7lc1UVf-VE'
         });
     }
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
 
-    let done = false;
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 6000);
-            done = true;
+    window.onclick = (e) => {
+        console.log('e.target.parentNode',e.target.parentNode);
+        console.log('box',box);
+        console.log('ytPlayer', ytPlayer);
+
+        if (e.target === modal) {
+            if(YT.PlayerState.PLAYING){
+                ytPlayer.stopVideo();
+            }
+            modal.style.display = 'none';
+        } else if(e.target.parentNode === card){
+            console.log('box.dataset', card.dataset);
+            ytPlayer.loadVideoById({'videoId': card.dataset.ytid });
+            modal.style.display = 'flex';
         }
-    }
-    function stopVideo() {
-        player.stopVideo();
-    }
+
+        
+    };
+
 }
