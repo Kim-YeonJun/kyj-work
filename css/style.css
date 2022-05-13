@@ -288,9 +288,9 @@ section {
 
 .interview .box_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(40rem, 1fr));
-    gap: 8rem 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(45rem, 1fr));
+    gap: 10rem 1rem;
     margin-top: 10rem;
 }
 
@@ -301,7 +301,7 @@ section {
     align-items: center;
     justify-content: center;
     word-break: keep-all;
-    min-height: 40rem;
+    min-height: 45rem;
     background-color: #eee;
 }
 
