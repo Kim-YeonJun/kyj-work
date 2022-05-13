@@ -328,6 +328,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 5;
 }
 
 .interview .box_container .box .card .imgpanel img {
@@ -365,6 +366,7 @@ section {
     left:0;
     top: 7rem;
     background: linear-gradient(#eee 50%, transparent);
+    z-index: 4;
 }
 
 .interview .box_container .box .card .awpanel::after {
