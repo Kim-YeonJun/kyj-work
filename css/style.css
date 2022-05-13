@@ -354,6 +354,7 @@ section {
 .interview .box_container .box .card .awpanel {
     margin-top: 8rem;
     padding: 1rem 4rem;
+    width: 100%;
     max-height: 30rem;
     overflow-y: scroll;
 } 
@@ -795,11 +796,6 @@ section {
         height: 50vh;
     }
 
-    /* 인터뷰세션 */
-    /* .interview .box_container .box {
-        min-height: 45rem;
-    } */
-
     /* 프로젝트세션 */
     .project .box_container {
         gap: 4rem 5rem;
@@ -855,11 +851,3 @@ section {
     }
 }
 
-@media (max-width: 375px) {  /* iPhone SE 기준 375px 667px */
-
-    /* 인터뷰세션 */
-    /* .interview .box_container .box {
-        min-height: 55rem;
-    }     */
-
-} 

@@ -72,7 +72,7 @@
 
         setTimeout(() => {
             // console.log('window.scrollY',window.scrollY);
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
         }, 500);
 
         setTimeout(() => {
