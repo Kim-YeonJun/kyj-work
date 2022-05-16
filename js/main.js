@@ -190,6 +190,7 @@
     //modal youtube 페이지
     const card = document.querySelectorAll('.project .box_container .box .card');
     const modal = document.querySelector('.modal');
+    const ytPlayerBack = document.querySelector('.ytPlayer_back');
     const tag = document.createElement('script');
     
     tag.src = "https://www.youtube.com/iframe_api";
@@ -201,14 +202,14 @@
     function onYouTubeIframeAPIReady() {
         console.log('api commplete');
         ytPlayer = new YT.Player('ytPlayer', {
-            height: '200',
-            width: '300',
+            height: '100%',
+            width: '100%',
             videoId: ''
         });
     }
 
     window.onclick = (e) => {
-        if (e.target === modal) {
+        if (e.target === ytPlayerBack) {
             ytPlayer.stopVideo();
             modal.style.display = 'none';
             rootDom.style.overflowY = 'visible';

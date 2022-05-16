@@ -672,19 +672,27 @@ section {
 /* 유튜브 플레이어 Modal */
 .modal {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 1001;
-    background: rgba(0, 0, 0, 0.3);
+    
 
     display: none;
     align-items: center;
     justify-content: center;
 }
 
+.modal .ytPlayer_back{ 
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .modal #ytPlayer {
+    position: absolute;
     width: 50%;
     height: 50%;
 }
