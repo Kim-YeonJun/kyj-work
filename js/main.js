@@ -70,10 +70,27 @@
     window.addEventListener('load', () => {
         const loading = document.querySelector('.loading');
 
-        setTimeout(() => {
-            // console.log('window.scrollY',window.scrollY);
-            // window.scrollTo(0, 0);
-        }, 500);
+        //폰트 체인지 시작
+        const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
+
+        const rootDom = document.querySelector('.html');
+        const nowFontName = document.querySelector('.now_whatis_fontname');
+        const change = document.querySelector('#selectfont');
+        let fontNum = 4;
+
+        rootDom.style.fontFamily = fontArr[3];
+        nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
+
+        change.addEventListener('change', (e) => {
+            fontNum = e.target.value;
+            rootDom.style.fontFamily = fontArr[fontNum];
+        });
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant'
+        });
 
         setTimeout(() => {
             // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
@@ -98,32 +115,25 @@
         }, 700);
     });
 
-    //폰트 체인지 시작
-    const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
-
-    const rootDom = document.querySelector('.html');
-    const nowFontName = document.querySelector('.now_whatis_fontname');
-    const change = document.querySelector('#selectfont');
-    let fontNum = 4;
-
-    rootDom.style.fontFamily = fontArr[3];
-    window.onload = () => nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
-
-    change.addEventListener('change', (e) => {
-        fontNum = e.target.value;
-        rootDom.style.fontFamily = fontArr[fontNum];
-    });
-
     //브라우저 크기 768이하일때 작동 시작
     const navbar = document.querySelector('.navbar');
+    const navbarLink = document.querySelectorAll('.navbar a');
     const overlay_navbar = document.querySelector('.overlay_navbar');
     const menuBtn = document.querySelector('#menu-btn');
 
     menuBtn.onclick = () => {
-        console.log("onclick");
+        console.log("menuBtn onclick");
         navbar.classList.toggle("active");
         overlay_navbar.classList.toggle("active");
     };
+
+    navbarLink.forEach((it)=>{
+        it.onclick = () => {
+            console.log("it onclick");
+            navbar.classList.toggle("active");
+            overlay_navbar.classList.toggle("active");
+        };
+    });
 
     window.onscroll = () => {
         navbar.classList.remove("active");
@@ -200,7 +210,7 @@
     let ytPlayer = null;
 
     function onYouTubeIframeAPIReady() {
-        console.log('api commplete');
+        // console.log('api commplete');
         ytPlayer = new YT.Player('ytPlayer', {
             height: '100%',
             width: '100%',
@@ -227,5 +237,9 @@
             }
         });
     };
+
+    function scrollToEl(el) {
+        document.querySelector('#'+el).scrollIntoView();
+    }
 
 }

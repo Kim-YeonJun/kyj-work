@@ -127,6 +127,7 @@ section {
     padding: 1rem 2rem;
     margin: 0 0.5rem;
     display: inline-block;
+    transition: 0.2s;
 }
 
 .header .navbar a:hover {
@@ -148,6 +149,7 @@ section {
 
 .header .icons #menu-btn {
     padding: 1rem;
+    transition: 0.1s;
 }
 
 .header .icons #menu-btn:hover {
@@ -587,11 +589,12 @@ section {
     padding: 0 1.5rem;
     text-decoration: none;
     color: var(--mapowhite);
+    transition: 0.2s;
 }
 
 .footer .container .links a:hover {
     display: inline-block;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .footer .container .address {
@@ -607,6 +610,11 @@ section {
 
 .footer .container .credit span {
     color: var(--mapobasic);
+    transition: 0.2s;
+}
+
+.footer .container .credit span:hover {
+    text-shadow: 0 0 5px var(--mapowhite);
 }
 
 .footer .mapofont {
@@ -851,7 +859,7 @@ section {
 
     .goToHome #gotoHome-btn span {
         font-size: 1px;
-        left: 8px;
+        left: 7px;
     }
 
     /* YTplayer */
