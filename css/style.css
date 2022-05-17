@@ -329,6 +329,7 @@ section {
     align-items: center;
     overflow: hidden;
     z-index: 5;
+    /* background-color: red; */
 }
 
 .interview .box_container .box .card .imgpanel img {
@@ -336,6 +337,7 @@ section {
     height: 200%;
     position: absolute;
     object-fit: contain;
+    
 }
 
 .interview .box_container .box .card h3 {
