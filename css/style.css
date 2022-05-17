@@ -582,6 +582,9 @@ section {
 .footer .container .links {
     color: var(--mapowhite);
     margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer .container .links a {
@@ -594,7 +597,7 @@ section {
 
 .footer .container .links a:hover {
     display: inline-block;
-    transform: scale(1.05);
+    text-shadow: 0 0 5px white;
 }
 
 .footer .container .address {
@@ -709,6 +712,13 @@ section {
 
 /* 미디어 쿼리 */
 @media (max-width: 768px) { /* ipad mini 기준  768px 1024px*/
+
+    .header .navbar a:hover {
+        background-color: rgba(0, 174, 239, 0.7);
+        border-radius: 5px;
+        color: var(--mapowhite);
+        transform: scale(1);
+    }
 
     .location .container {
         display: flex;

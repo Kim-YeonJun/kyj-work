@@ -86,11 +86,14 @@
             rootDom.style.fontFamily = fontArr[fontNum];
         });
 
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'instant'
-        });
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'instant'
+            });
+        }, 500);
+        
 
         setTimeout(() => {
             // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
@@ -131,24 +134,27 @@
         };
     });
 
+    window.onscroll = () => {
+        removeFn() ;
+    };
+    
+    window.addEventListener('resize', () => {
+        if (parseInt(window.innerWidth) > 768) {
+            removeFn();
+        }
+        //브라우저 리사이즈시 좌표맵 중심 이동
+        map.panTo(changePosition);
+    });
+
     function toggleFn() {
         navbar.classList.toggle("active");
         overlay_navbar.classList.toggle("active");
     }
 
-    window.onscroll = () => {
+    function removeFn() {
         navbar.classList.remove("active");
         overlay_navbar.classList.remove("active");
-    };
-
-    window.addEventListener('resize', () => {
-        if (parseInt(window.innerWidth) > 768) {
-            navbar.classList.remove("active");
-            overlay_navbar.classList.remove("active");
-        }
-        //브라우저 리사이즈시 좌표맵 중심 이동
-        map.panTo(changePosition);
-    });
+    }
 
     //홈 화면 이미지 변화 애니메이션 시작
     const mySlides = document.querySelectorAll(".mySlides");
@@ -167,12 +173,11 @@
         }
     }, 5000);
 
-    //맨 위로 올라가는 버튼관려 이벤트 시작
+    //gotoHome 이벤트 시작
     const gotoHomeBtn = document.querySelector('#gotoHome-btn');
     let scrollFlag = true;
 
     window.addEventListener('scroll', () => {
-
         if (window.scrollY === 0) {
             scrollEvent(true, "fade-out");
         } else if (window.scrollY !== 0 && scrollFlag) {
@@ -196,7 +201,7 @@
         }
         gotoHomeBtn.style.animation = `${aniName} 0.2s linear forwards`;
         scrollFlag = check;
-    } //맨 위로 올라가는 버튼관려 이벤트 끝
+    } //gotoHome 이벤트 끝
 
     //modal youtube 페이지
     const card = document.querySelectorAll('.project .box_container .box .card');
@@ -230,10 +235,10 @@
             ytPlayer.loadVideoById({'videoId': it.dataset.ytid});
             modal.style.display = 'flex';
             rootDom.style.overflowY = 'hidden';
-            // console.log('rootDom',rootDom);
         };
     });
 
+    //navbar 스크롤이동
     function scrollToEl(el) {
         document.querySelector('#'+el).scrollIntoView();
     }
