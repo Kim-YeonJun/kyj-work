@@ -65,6 +65,8 @@
     var zoomControl = new kakao.maps.ZoomControl();
     //카카오 맵 종료
 
+    //html제어용
+    const rootDom = document.documentElement;
 
     //모든 준비 완료시 실행
     window.addEventListener('load', () => {
@@ -72,8 +74,6 @@
 
         //폰트 체인지 시작
         const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
-
-        const rootDom = document.querySelector('.html');
         const nowFontName = document.querySelector('.now_whatis_fontname');
         const change = document.querySelector('#selectfont');
         let fontNum = 4;
@@ -107,7 +107,7 @@
             //로딩화면 제어
             loading.style.transition = '0.3s';
             loading.style.opacity = 0;
-            document.documentElement.style.overflowY = 'visible';
+            rootDom.style.overflowY = 'visible';
 
             setTimeout(() => {
                 loading.style.display = 'none';
@@ -122,18 +122,19 @@
     const menuBtn = document.querySelector('#menu-btn');
 
     menuBtn.onclick = () => {
-        console.log("menuBtn onclick");
-        navbar.classList.toggle("active");
-        overlay_navbar.classList.toggle("active");
+        toggleFn();
     };
 
     navbarLink.forEach((it)=>{
         it.onclick = () => {
-            console.log("it onclick");
-            navbar.classList.toggle("active");
-            overlay_navbar.classList.toggle("active");
+            toggleFn();
         };
     });
+
+    function toggleFn() {
+        navbar.classList.toggle("active");
+        overlay_navbar.classList.toggle("active");
+    }
 
     window.onscroll = () => {
         navbar.classList.remove("active");
@@ -218,25 +219,20 @@
         });
     }
 
-    window.onclick = (e) => {
-        if (e.target === ytPlayerBack) {
-            ytPlayer.stopVideo();
-            modal.style.display = 'none';
-            rootDom.style.overflowY = 'visible';
-            return;
-        } 
+    ytPlayerBack.onclick = () => {
+        ytPlayer.stopVideo();
+        modal.style.display = 'none';
+        rootDom.style.overflowY = 'visible';
+    } 
         
-        card.forEach((it) => {
-            if(e.target.parentNode === it){
-                // ytPlayer.cueVideoById({'videoId': it.dataset.ytid});
-                ytPlayer.loadVideoById({'videoId': it.dataset.ytid});
-                modal.style.display = 'flex';
-                rootDom.style.overflowY = 'hidden';
-                console.log('rootDom',rootDom);
-                return;
-            }
-        });
-    };
+    card.forEach((it) => {
+        it.onclick = () => {
+            ytPlayer.loadVideoById({'videoId': it.dataset.ytid});
+            modal.style.display = 'flex';
+            rootDom.style.overflowY = 'hidden';
+            // console.log('rootDom',rootDom);
+        };
+    });
 
     function scrollToEl(el) {
         document.querySelector('#'+el).scrollIntoView();
