@@ -24,26 +24,6 @@ html {
     transform: scale(1);
     animation: moving 2s infinite linear alternate;
 }
-/* 
-.loading .progressbar {
-    position: absolute;
-    width: 80vw;
-    height: 1vh;
-    background-color: #999;
-    border-radius: 50px;
-    left: 10vw;
-    bottom: 10vh;
-    opacity: 0;
-    animation: moving3 0.2s 0.5s linear forwards;
-    overflow-x: hidden;
-}
-
-.loading .progressbar div {
-    width: 0%;
-    height: 1vh;
-    animation: moving2 0.3s 0.6s linear forwards;
-    background-color: #fff;
-} */
 
 @keyframes moving {
     from {}
@@ -53,20 +33,3 @@ html {
         opacity: 1;
     }
 }
-/* 
-@keyframes moving2 {
-    from {}
-
-    to {
-        width: 100%;
-    }
-}
-
-
-@keyframes moving3 {
-    from {}
-
-    to {
-        opacity: 1;
-    }
-} */

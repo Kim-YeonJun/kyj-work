@@ -93,7 +93,6 @@
                 behavior: 'instant'
             });
         }, 500);
-        
 
         setTimeout(() => {
             // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
