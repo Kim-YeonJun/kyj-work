@@ -177,6 +177,10 @@
     }
     
     //모든 준비 완료시 실행
+    //window.onload = () => {};
+      window.addEventListener('click', function() {
+        alert(4);
+      });
     window.addEventListener('load', () => {
         const loading = document.querySelector('.loading');
 
@@ -242,7 +246,7 @@
         let nextNum = 0;
         
         setInterval(() => {
-            console.log(imgTitle,document.querySelector('.home_bg'));
+            // console.log(imgTitle,document.querySelector('.home_bg'));
             img.src = imgs[nextNum].src;
             imgTitle.innerHTML = title[nextNum];
             mySlide.style.animation = "fade_in_home_img 2s linear";
