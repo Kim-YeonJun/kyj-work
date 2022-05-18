@@ -178,9 +178,6 @@
     
     //모든 준비 완료시 실행
     //window.onload = () => {};
-      window.addEventListener('click', function() {
-        alert(4);
-      });
     window.addEventListener('load', () => {
         const loading = document.querySelector('.loading');
 
