@@ -68,55 +68,6 @@
     //html제어용
     const rootDom = document.documentElement;
 
-    //모든 준비 완료시 실행
-    window.addEventListener('load', () => {
-        const loading = document.querySelector('.loading');
-
-        //폰트 체인지 시작
-        const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
-        const nowFontName = document.querySelector('.now_whatis_fontname');
-        const change = document.querySelector('#selectfont');
-        let fontNum = 4;
-
-        rootDom.style.fontFamily = fontArr[3];
-        nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
-
-        change.addEventListener('change', (e) => {
-            fontNum = e.target.value;
-            rootDom.style.fontFamily = fontArr[fontNum];
-        });
-
-        setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'instant'
-            });
-        }, 500);
-
-        setTimeout(() => {
-            // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
-            // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
-            //맵 타입[지도, 스카이뷰] 컨트롤러 추가
-            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-            //줌버튼 컨트롤러 추가
-            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-            //마우스휠을 사용한 확대 축소 금지
-            map.setZoomable(false);
-            //해당 포지견으로 맵 중심을 이동시깁니다.
-            map.panTo(changePosition);
-
-            //로딩화면 제어
-            loading.style.transition = '0.3s';
-            loading.style.opacity = 0;
-            rootDom.style.overflowY = 'visible';
-
-            setTimeout(() => {
-                loading.style.display = 'none';
-            }, 300);
-        }, 700);
-    });
-
     //브라우저 크기 768이하일때 작동 시작
     const navbar = document.querySelector('.navbar');
     const navbarLink = document.querySelectorAll('.navbar a');
@@ -241,5 +192,86 @@
     function scrollToEl(el) {
         document.querySelector('#'+el).scrollIntoView();
     }
+    
+    //모든 준비 완료시 실행
+    window.addEventListener('load', () => {
+        const loading = document.querySelector('.loading');
+
+        //폰트 체인지 시작
+        const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
+        const nowFontName = document.querySelector('.now_whatis_fontname');
+        const change = document.querySelector('#selectfont');
+        let fontNum = 4;
+
+        rootDom.style.fontFamily = fontArr[3];
+        nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
+
+        change.addEventListener('change', (e) => {
+            fontNum = e.target.value;
+            rootDom.style.fontFamily = fontArr[fontNum];
+        });
+
+        // loading img
+        const imgHome = [
+            "./images/home_bg2.jpg",
+            "./images/home_bg3.jpg",
+            "./images/home_bg4.jpg",
+            "./images/home_bg5.jpg",
+            "./images/home_bg6.jpg",
+            "./images/home_bg8.jpg",
+            "./images/home_bg9.jpg"
+        ];
+
+        const imgInterView = [
+            "./images/interView_Manager.jpg",
+            "./images/interview_PM.jpg",
+            "./images/interview_CdLd.jpg",
+            "./images/interview_BcLd.jpg",
+            "./images/interview_DevUIUXLd.jpg",
+            "./images/interView_DevFront.jpg"
+        ];
+
+        imgHome.forEach((it,idx)=> {
+            // const img = new Image();
+            // img.src = it;
+            document.querySelectorAll('.home_bg')[idx+1].src = it;
+        });
+
+        imgInterView.forEach((it,idx)=> {
+            // const img = new Image();
+            // img.src = it;
+            document.querySelectorAll('.interview_img').src = it;
+        });
+
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'instant'
+            });
+        }, 500);
+
+        setTimeout(() => {
+            // 지도에 컨트롤을 추가해서 지도위에 표시됩니다
+            // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+            //맵 타입[지도, 스카이뷰] 컨트롤러 추가
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+            //줌버튼 컨트롤러 추가
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+            //마우스휠을 사용한 확대 축소 금지
+            map.setZoomable(false);
+            //해당 포지견으로 맵 중심을 이동시깁니다.
+            map.panTo(changePosition);
+
+            //로딩화면 제어
+            loading.style.transition = '0.3s';
+            loading.style.opacity = 0;
+            rootDom.style.overflowY = 'visible';
+
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 300);
+        }, 700);
+    });
 
 }

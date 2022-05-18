@@ -74,6 +74,7 @@ html {
     font-family: "MapoDPP";
     font-size: 10px;
     overflow-x: hidden;
+    overflow-y: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
@@ -95,6 +96,38 @@ html::-webkit-scrollbar-thumb {
 section {
     padding: 2rem 7%;
     background: var(--bg);
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.loading .loadingimg {
+    position: absolute;
+    width: 80vw;
+    height: 90vh;
+    opacity: 0.5;
+    background: url(../images/Black_Negative.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: scale(1);
+    animation: moving 2s infinite linear alternate;
+}
+
+@keyframes moving {
+    from {}
+
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 /* 헤더 섹션 시작*/
