@@ -204,6 +204,7 @@
             "./images/home_bg8.jpg",
             "./images/home_bg9.jpg",
             "./images/home_bg1.jpg",
+            "369228.png"
         ];
 
         const imgInterView = [
