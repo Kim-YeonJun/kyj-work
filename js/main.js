@@ -201,6 +201,7 @@
             "./images/home_bg4.jpg",
             "./images/home_bg5.jpg",
             "./images/home_bg6.jpg",
+            "./images/home_bg7.jpg",
             "./images/home_bg8.jpg",
             "./images/home_bg9.jpg",
             "./images/home_bg1.jpg",
@@ -224,7 +225,7 @@
             "개발&UIUX팀",
             "캐릭터 디자인팀 발표회",
             "방송컨텐츠팀 발표회",
-            "캐릭터 디자인팀",
+            "캐릭터 디자인팀"
         ];
 
         const imgs = new Array();
