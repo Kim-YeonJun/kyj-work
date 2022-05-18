@@ -98,6 +98,7 @@ section {
     background: var(--bg);
 }
 
+/* START 로딩 화면 */
 .loading {
     position: fixed;
     top: 0;
@@ -130,7 +131,7 @@ section {
     }
 }
 
-/* 헤더 섹션 시작*/
+/* START 헤더 섹션 */
 .header {
     width: 100%;
     max-height: 90px;
@@ -190,9 +191,9 @@ section {
     border-radius: 5px;
     color: var(--mapowhite);
     transform: scale(1.2);
-} /* 헤더 섹션 끝*/
+} /* END 헤더 섹션 */
 
-/* 홈 섹션  시작*/
+/* START 홈 섹션 */
 .home {
     width: 100%;
     height: 100vh;
@@ -202,7 +203,7 @@ section {
 }
 
 .home .content .slidePanel .mySlides {
-    display: none;
+    /* display: none; */
     position: fixed;
     left: 0;
     top: 0;
@@ -235,9 +236,9 @@ section {
     to {
         opacity: 1;
     }
-} /* 홈 섹션  끝*/
+} /* END 홈 섹션 */
 
-/* 마청단? 섹션  시작*/
+/* START 마청단? 섹션 */
 .about {
     width: 100%;
     padding-bottom: 8rem;
@@ -298,9 +299,9 @@ section {
     padding: 1.2rem 0;
     line-height: 1.8;
     word-break: keep-all;
-} /* 마청단? 섹션  끝*/
+} /* END 마청단? 섹션 */
 
-/* 인터뷰 섹션  시작*/
+/* START 인터뷰 섹션 */
 .interview {
     width: 100%;
 }
@@ -435,10 +436,9 @@ section {
 
 .interview .box_container .box .card .answer span {
     color: tomato;
-}
-/* 인터뷰 섹션  끝*/
+}/* END 인터뷰 섹션 */
 
-/* 프로젝트 섹션  시작*/
+/* START 프로젝트 섹션 */
 .project {
     width: 100%;
 }
@@ -493,9 +493,9 @@ section {
     font-size: 3rem;
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, 1);
-} /* 프로젝트 섹션  끝*/
+} /* END 프로젝트 섹션 */
 
-/* 오시는길 섹션  시작*/
+/* START 오시는길 섹션 */
 .location {
     width: 100%;
 }
@@ -586,9 +586,9 @@ section {
     padding: 5px;
     background-color: var(--mapowhite);
     border: 1px solid var(--mapogray);
-} /* 오시는길 섹션  끝*/
+} /* END 오시는길 섹션 */
 
-/* 풋터 섹션  시작*/
+/* START 풋터 섹션 */
 .footer {
     width: 100%;
     padding: 1.5rem 2%;
@@ -665,9 +665,9 @@ section {
     color: var(--mapowhite);
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
-} /* 풋터 섹션  끝*/
+} /* END 풋터 섹션 */
 
-/* 스크롤 맵위 버튼 시작 */
+/* START 스크롤 맵위 버튼 */
 .goToHome #gotoHome-btn {
     position: fixed;
     right: 15px;
@@ -713,9 +713,9 @@ section {
     to {
         opacity: 0;
     }
-} /* 스크롤 맵위 버튼 끝 */
+} /* END 스크롤 맵위 버튼  */
 
-/* 유튜브 플레이어 Modal */
+/*  START 유튜브 플레이어 Modal */
 .modal {
     position: fixed;
     width: 100vw;
@@ -744,7 +744,7 @@ section {
 }
 
 /* 미디어 쿼리 */
-@media (max-width: 768px) { /* ipad mini 기준  768px 1024px*/
+@media (max-width: 820px) { /* ipad air 기준  820px 1180px*/
 
     .header .navbar a:hover {
         background-color: rgba(0, 174, 239, 0.7);

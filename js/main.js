@@ -106,23 +106,6 @@
         overlay_navbar.classList.remove("active");
     }
 
-    //홈 화면 이미지 변화 애니메이션 시작
-    const mySlides = document.querySelectorAll(".mySlides");
-    let nextNum = 1;
-
-    mySlides[0].style.display = "block";
-    setInterval(() => {
-        for (i = 0; i < mySlides.length; i++) {
-            mySlides[i].style.display = "none";
-        }
-        mySlides[nextNum].style.animation = "fade_in_home_img 2s linear";
-        mySlides[nextNum].style.display = "block";
-        nextNum++;
-        if (nextNum >= mySlides.length) {
-            nextNum = 0;
-        }
-    }, 5000);
-
     //gotoHome 이벤트 시작
     const gotoHomeBtn = document.querySelector('#gotoHome-btn');
     let scrollFlag = true;
@@ -211,7 +194,7 @@
             rootDom.style.fontFamily = fontArr[fontNum];
         });
 
-        // loading img
+        // START loading img
         const imgHome = [
             "./images/home_bg2.jpg",
             "./images/home_bg3.jpg",
@@ -219,7 +202,8 @@
             "./images/home_bg5.jpg",
             "./images/home_bg6.jpg",
             "./images/home_bg8.jpg",
-            "./images/home_bg9.jpg"
+            "./images/home_bg9.jpg",
+            "./images/home_bg1.jpg",
         ];
 
         const imgInterView = [
@@ -231,18 +215,47 @@
             "./images/interView_DevFront.jpg"
         ];
 
+        const title = [
+            "방송컨텐츠팀",
+            "회의실",
+            "개발&UIUX팀",
+            "1층 사업단 사무실",
+            "회의실",
+            "개발&UIUX팀",
+            "캐릭터 디자인팀 발표회",
+            "방송컨텐츠팀 발표회",
+            "캐릭터 디자인팀",
+        ];
+
+        const imgs = new Array();
         imgHome.forEach((it,idx)=> {
-            // const img = new Image();
-            // img.src = it;
-            document.querySelectorAll('.home_bg')[idx+1].src = it;
+            imgs[idx] = new Image();
+            imgs[idx].src = it;
+            // document.querySelectorAll('.home_bg')[idx+1].src = it;
         });
 
+        //홈 화면 이미지 변화 애니메이션 시작
+        const mySlide = document.querySelector(".mySlides");
+        const imgTitle = document.querySelector(".mySlides h3");
+        const img = document.querySelector('.home_bg');
+        let nextNum = 0;
+        
+        setInterval(() => {
+            console.log(imgTitle,document.querySelector('.home_bg'));
+            img.src = imgs[nextNum].src;
+            imgTitle.innerHTML = title[nextNum];
+            mySlide.style.animation = "fade_in_home_img 2s linear";
+            nextNum++;
+            if (nextNum >= imgHome.length) {
+                nextNum = 0;
+            }
+        }, 5000);
+
         imgInterView.forEach((it,idx)=> {
-            // const img = new Image();
-            // img.src = it;
             document.querySelectorAll('.interview_img')[idx].src = it;
         });
 
+        //새로고침 이후 로드시 화면 맨위로 한번에 이동
         setTimeout(() => {
             window.scrollTo({
                 top: 0,
