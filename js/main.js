@@ -240,7 +240,7 @@
         imgInterView.forEach((it,idx)=> {
             // const img = new Image();
             // img.src = it;
-            document.querySelectorAll('.interview_img').src = it;
+            document.querySelectorAll('.interview_img')[idx].src = it;
         });
 
         setTimeout(() => {
