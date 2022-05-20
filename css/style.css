@@ -98,6 +98,30 @@ section {
     background: var(--bg);
 }
 
+/* TEST Ani */
+.man_box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+
+    width: 128px;
+    height: 163px;
+    will-change: transform;
+}
+
+.man_box .man {
+    height: 100%;
+    background-image: url('../images/walk.png');
+    background-size: 1158px 163px;
+    animation: man_walk 0.7s infinite steps(9);
+}
+
+@keyframes man_walk {
+    from { background-position-x: 0px; }
+    to { background-position-x: -1158px; }
+}
+
 /* START 로딩 화면 */
 .loading {
     position: fixed;
@@ -219,6 +243,7 @@ section {
         1px 0 2px var(--mapoblack), 0 -1px 2px var(--mapoblack);
     padding: 2rem;
     bottom: 1rem;
+    
 }
 
 .home .content .slidePanel .mySlides img {
@@ -228,7 +253,17 @@ section {
     border-radius: 0 0 50px 0px;
 }
 
-@keyframes fade_in_home_img {
+@keyframes fade_in_home_img1 {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in_home_img2 {
     from {
         opacity: 0.4;
     }

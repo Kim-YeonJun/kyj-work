@@ -179,83 +179,23 @@
     //모든 준비 완료시 실행
     //window.onload = () => {};
     window.addEventListener('load', () => {
+        init();
+    });
+
+    const renderGame = () => {
+        window.requestAnimationFrame(renderGame);
+    };
+
+    const init = () => {
+        loadingScreenFn()
+        fontChangeFn()
+        slideShowImgFn();
+        initAniImg();
+        renderGame();
+    };
+
+    function loadingScreenFn() {
         const loading = document.querySelector('.loading');
-
-        //폰트 체인지 시작
-        const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
-        const nowFontName = document.querySelector('.now_whatis_fontname');
-        const change = document.querySelector('#selectfont');
-        let fontNum = 4;
-
-        rootDom.style.fontFamily = fontArr[3];
-        nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
-
-        change.addEventListener('change', (e) => {
-            fontNum = e.target.value;
-            rootDom.style.fontFamily = fontArr[fontNum];
-        });
-
-        // START loading img
-        const imgHome = [
-            "./images/home_bg2.jpg",
-            "./images/home_bg3.jpg",
-            "./images/home_bg4.jpg",
-            "./images/home_bg5.jpg",
-            "./images/home_bg6.jpg",
-            "./images/home_bg7.jpg",
-            "./images/home_bg8.jpg",
-            "./images/home_bg9.jpg",
-            "./images/home_bg1.jpg",
-        ];
-        
-        const imgInterView = [
-            "./images/interView_Manager.jpg",
-            "./images/interview_PM.jpg",
-            "./images/interview_CdLd.jpg",
-            "./images/interview_BcLd.jpg",
-            "./images/interview_DevUIUXLd.jpg",
-            "./images/interView_DevFront.jpg"
-        ];
-
-        const title = [
-            "방송컨텐츠팀",
-            "회의실",
-            "개발&UIUX팀",
-            "1층 사업단 사무실",
-            "회의실",
-            "개발&UIUX팀",
-            "캐릭터 디자인팀 발표회",
-            "방송컨텐츠팀 발표회",
-            "캐릭터 디자인팀"
-        ];
-
-        const imgs = new Array();
-        imgHome.forEach((it,idx)=> {
-            imgs[idx] = new Image();
-            imgs[idx].src = it;
-            // document.querySelectorAll('.home_bg')[idx+1].src = it;
-        });
-
-        //홈 화면 이미지 변화 애니메이션 시작
-        const mySlide = document.querySelector(".mySlides");
-        const imgTitle = document.querySelector(".mySlides h3");
-        const img = document.querySelector('.home_bg');
-        let nextNum = 0;
-        
-        setInterval(() => {
-            // console.log(imgTitle,document.querySelector('.home_bg'));
-            img.src = imgs[nextNum].src;
-            imgTitle.innerHTML = title[nextNum];
-            mySlide.style.animation = "fade_in_home_img 2s linear";
-            nextNum++;
-            if (nextNum >= imgHome.length) {
-                nextNum = 0;
-            }
-        }, 5000);
-
-        imgInterView.forEach((it,idx)=> {
-            document.querySelectorAll('.interview_img')[idx].src = it;
-        });
 
         //새로고침 이후 로드시 화면 맨위로 한번에 이동
         setTimeout(() => {
@@ -287,6 +227,96 @@
                 loading.style.display = 'none';
             }, 300);
         }, 700);
-    });
+    }
 
+    function fontChangeFn() {
+         //폰트 체인지 시작
+         const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
+         const nowFontName = document.querySelector('.now_whatis_fontname');
+         const change = document.querySelector('#selectfont');
+         let fontNum = 4;
+ 
+         rootDom.style.fontFamily = fontArr[3];
+         nowFontName.innerHTML = "서체 : " + rootDom.style.fontFamily;
+ 
+         change.addEventListener('change', (e) => {
+             fontNum = e.target.value;
+             rootDom.style.fontFamily = fontArr[fontNum];
+         });
+    }
+
+    function slideShowImgFn() {
+        // START loading slideShowImg & text
+        const imgHome = [
+            "./images/home_bg2.jpg",
+            "./images/home_bg3.jpg",
+            "./images/home_bg4.jpg",
+            "./images/home_bg5.jpg",
+            "./images/home_bg6.jpg",
+            "./images/home_bg7.jpg",
+            "./images/home_bg8.jpg",
+            "./images/home_bg9.jpg",
+            "./images/home_bg1.jpg",
+        ];
+
+        const title = [
+            "방송컨텐츠팀",
+            "회의실",
+            "개발&UIUX팀",
+            "1층 사업단 사무실",
+            "회의실",
+            "개발&UIUX팀",
+            "캐릭터 디자인팀 발표회",
+            "방송컨텐츠팀 발표회",
+            "캐릭터 디자인팀"
+        ];
+
+        const imgs = new Array();
+        imgHome.forEach((it,idx)=> {
+            imgs[idx] = new Image();
+            imgs[idx].src = it;
+        }); // End loading slideShowImg & text
+
+        // START slideShowImg Animation
+        const mySlide = document.querySelector(".mySlides");
+        const imgTitle = document.querySelector(".mySlides h3");
+        const img = document.querySelector('.home_bg');
+        let animationChange = true;
+        let nextNum = 0;
+        
+        setInterval(() => {
+            // console.log(imgTitle,document.querySelector('.home_bg'));
+            img.src = imgs[nextNum].src;
+            imgTitle.innerHTML = title[nextNum];
+            if(animationChange) {
+                mySlide.style.animation = "fade_in_home_img1 1.5s linear forwards";
+                animationChange = false;
+            }
+            else {
+                mySlide.style.animation = "fade_in_home_img2 1.5s linear forwards";
+                animationChange = true;
+            }
+            nextNum++;
+            if (nextNum >= imgHome.length) {
+                nextNum = 0;
+            }
+        }, 5000); // END slideShowImg Animation
+
+        // START loading imgInterView 
+        const imgInterView = [
+            "./images/interView_Manager.jpg",
+            "./images/interview_PM.jpg",
+            "./images/interview_CdLd.jpg",
+            "./images/interview_BcLd.jpg",
+            "./images/interview_DevUIUXLd.jpg",
+            "./images/interView_DevFront.jpg"
+        ];
+
+        imgInterView.forEach((it,idx)=> {
+            document.querySelectorAll('.interview_img')[idx].src = it;
+        });
+    }
+
+    //화면 프레임60fps를 유지하도록 처리해주는 requestAnimationFrame(callbackFn) 내장함수
+    
 }
