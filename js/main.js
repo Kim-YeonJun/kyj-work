@@ -182,16 +182,15 @@
         init();
     });
 
-    const renderGame = () => {
-        window.requestAnimationFrame(renderGame);
+    const render = () => {
+        window.requestAnimationFrame(render);
     };
 
     const init = () => {
         loadingScreenFn()
         fontChangeFn()
         slideShowImgFn();
-        initAniImg();
-        renderGame();
+        render();
     };
 
     function loadingScreenFn() {
