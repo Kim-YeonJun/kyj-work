@@ -182,6 +182,7 @@
         init();
     });
 
+    //화면 프레임60fps를 유지하도록 처리해주는 requestAnimationFrame(callbackFn) 내장함수
     const render = () => {
         window.requestAnimationFrame(render);
     };
@@ -327,7 +328,4 @@
             document.querySelectorAll('.interview_img')[idx].src = it;
         });
     }
-
-    //화면 프레임60fps를 유지하도록 처리해주는 requestAnimationFrame(callbackFn) 내장함수
-    
 }
