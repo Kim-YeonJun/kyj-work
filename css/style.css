@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "MapoAgape";
     src: url("../font/MapoAgape.woff") format("woff");
 }
@@ -41,7 +41,7 @@
 @font-face {
     font-family: "MapoPeacefull";
     src: url("../font/MapoPeacefull.woff") format("woff");
-}
+} */
 
 :root {
     --main-color: #d3ad7f;

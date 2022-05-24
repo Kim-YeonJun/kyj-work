@@ -188,8 +188,8 @@
 
     const init = () => {
         loadingScreenFn()
-        fontChangeFn()
         slideShowImgFn();
+        fontChangeFn()
         render();
     };
 
@@ -228,9 +228,21 @@
         }, 700);
     }
 
-    function fontChangeFn() {
-         //폰트 체인지 시작
-         const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
+    async function fontChangeFn() {
+
+        //폰트 셋팅
+        const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
+
+        //폰트 Download
+        for(let i; i < fontArr.length; i++){
+            const font = new FontFace(fontArr[i], `url(../font/${fontArr[i]}.woff)`);
+            // wait for font to be loaded
+            await font.load();
+            // add font to document
+            document.fonts.add(font);
+        }
+
+        //폰트 체인지 시작
          const nowFontName = document.querySelector('.now_whatis_fontname');
          const change = document.querySelector('#selectfont');
          let fontNum = 4;
@@ -269,7 +281,7 @@
             "방송컨텐츠팀 발표회",
             "캐릭터 디자인팀"
         ];
-
+        
         const imgs = new Array();
         imgHome.forEach((it,idx)=> {
             imgs[idx] = new Image();
