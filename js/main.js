@@ -9,8 +9,7 @@ window.document.ondragstart = () => false;
 //         return false;
 //     }
 // };
-console.log('document.location.href',document.location.href);
-const address = `${document.location.href}/images/Black_Negative.jpg`;
+
 //카카오 맵 api 시작
 //37.563875 , 126.909335 마청단 위치
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
