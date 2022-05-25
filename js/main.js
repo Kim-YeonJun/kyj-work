@@ -189,7 +189,7 @@ const render = () => {
 const init = () => {
     loadingScreenFn()
     slideShowImgFn();
-    fontChangeFn()
+    fontChangeFn();
     render();
 };
 
@@ -232,10 +232,10 @@ async function fontChangeFn() {
 
     //폰트 셋팅
     const fontArr = ['MapoAgape', 'MapoBackpacking', 'MapoDacapo', 'MapoDPP', 'MapoFlowerIsland', 'MapoGoldenPier', 'MapoHongdaeFreedom', 'MapoMaponaru', 'MapoPeacefull'];
-
     //폰트 Download
-    for(let i; i < fontArr.length; i++){
-        const font = new FontFace(fontArr[i], `url(../font/${fontArr[i]}.woff)`);
+    for(let i = 0; i < fontArr.length; i++){
+        console.log(document.fonts.check("12px MapoAgape"));
+        const font = new FontFace(fontArr[i], `url(../font/${fontArr[i]}.woff) format("woff2")`);
         // wait for font to be loaded
         await font.load();
         // add font to document
